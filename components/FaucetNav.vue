@@ -1,62 +1,64 @@
 <template>
   <div class="drawer drawer-end">
     <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
-    <div class="drawer-content flex justify-center">
-      <header class="navbar py-[.2em] will-change-transform top-0">
-        <div class="navbar-start ml-2 md:ml-6 block text-base">
-          <a
-            href="/"
-            class="btn bg-transparent hover:bg-transparent min-h-0 h-0 p-0 border-transparent hover:border-transparent"
-          >
-            <Logo />
-          </a>
-        </div>
-        <nav class="lg:flex justify-self-center hidden navbar-center">
-          <ul class="flex">
-            <li class="partials">
-              <a href="#features" class="partials">Features</a>
-            </li>
-            <li class="partials">
-              <a href="#ecosystem" class="partials">Ecosystem</a>
-            </li>
-            <li class="partials">
-              <a href="#trading" class="partials">Trading</a>
-            </li>
-          </ul>
-          <!-- <button>
+    <div class="drawer-content">
+      <div class="flex justify-center">
+        <header class="navbar py-[.2em] will-change-transform top-0 w-[96%]">
+          <div class="navbar-start ml-2 md:ml-6 block text-base">
+            <a
+              href="/"
+              class="btn bg-transparent hover:bg-transparent min-h-0 h-0 p-0 border-transparent hover:border-transparent"
+            >
+              <Logo />
+            </a>
+          </div>
+          <nav class="lg:flex justify-self-center hidden navbar-center">
+            <ul class="flex">
+              <li class="partials">
+                <a href="#features" class="partials">Features</a>
+              </li>
+              <li class="partials">
+                <a href="#ecosystem" class="partials">Ecosystem</a>
+              </li>
+              <li class="partials">
+                <a href="#trading" class="partials">Trading</a>
+              </li>
+            </ul>
+            <!-- <button>
         <img src="assets/img/animated/day.svg" alt="Default" />
       </button> -->
-        </nav>
-        <div class="justify-self-end hidden lg:flex navbar-end">
-          <button
-            class="btn btn-outline text-xs mx-6 btn-primary"
-            onclick="waitlist.showModal()"
-          >
-            join waitlist
-          </button>
-        </div>
-        <div class="max-lg:navbar-end">
-          <label
-            for="my-drawer-4"
-            class="drawer-button btn btn-ghost text-xs btn-primary lg:hidden"
-            style="--tw-bg-opacity: 0"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5 fill-[hsl(76 100% 50%)]"
-              viewBox="0 0 24 24"
-              stroke="hsl(76 100% 50%)"
+          </nav>
+          <div class="justify-self-end hidden lg:flex navbar-end">
+            <button
+              class="btn btn-outline text-xs mx-6 btn-primary"
+              onclick="waitlist.showModal()"
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 12h8m-8 6h16"
-              />
-            </svg>
-          </label>
-        </div>
-      </header>
+              join waitlist
+            </button>
+          </div>
+          <div class="max-lg:navbar-end">
+            <label
+              for="my-drawer-4"
+              class="drawer-button btn btn-ghost text-xs btn-primary lg:hidden"
+              style="--tw-bg-opacity: 0"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 fill-[hsl(76 100% 50%)]"
+                viewBox="0 0 24 24"
+                stroke="hsl(76 100% 50%)"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </label>
+          </div>
+        </header>
+      </div>
     </div>
 
     <div class="drawer-side z-10 lg:hidden">
