@@ -14,7 +14,7 @@ async function sendToken(toAddress: string) {
   console.log(toAddress)
   config({ path: "/path/to/.env" });
 
-  const jsonFile = "contracts/abi/token.json";
+  const jsonFile = "public/contracts/abi/token.json";
   const abi = JSON.parse(readFileSync(jsonFile).toString());
   const tokenContract = "0x153dE0bA5B0DdEb8817C4bc2f6Afd201ae391c48";
 
