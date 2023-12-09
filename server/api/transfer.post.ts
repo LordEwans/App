@@ -24,7 +24,7 @@ async function sendToken(toAddress: string) {
   const contract = new ethers.Contract(tokenContract, abi, provider);
   const signer = new ethers.Wallet(process.env.SIGNER_PRIVATE_KEY!, provider);
 
-  const amount = ethers.parseUnits("100", 18);
+  const amount = ethers.parseUnits("500", 18);
 
   const data = contract.interface.encodeFunctionData("mint", [
     toAddress,
