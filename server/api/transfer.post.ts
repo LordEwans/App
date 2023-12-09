@@ -1,6 +1,7 @@
 import { config } from "dotenv";
 import { ethers } from "ethers";
 import { readFileSync } from "node:fs";
+import abi from "../abi";
 
 export default defineEventHandler(async (event) => {
   const body = await readBody(event);
@@ -13,9 +14,7 @@ export default defineEventHandler(async (event) => {
 async function sendToken(toAddress: string) {
   console.log(toAddress)
   config({ path: "/path/to/.env" });
-
-  const jsonFile = "public/contracts/abi/token.json";
-  const abi = JSON.parse(readFileSync(jsonFile).toString());
+  
   const tokenContract = "0x153dE0bA5B0DdEb8817C4bc2f6Afd201ae391c48";
 
   const network = process.env.ETHEREUM_NETWORK;
