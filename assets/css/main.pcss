@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--logo-color: oklch(var(--p));
+	--p: 92.01% 0.236 126.7;
+	--text: hsl(147, 100%, 50%);
+	--pc: var(--b1);
+	--pf: var(--p);
+	--bc: var(--b1);
+	--b1-trans: hsla(212, 18%, 14%, 0.3);
+	--b1-nav: hsla(213, 18%, 12%, .8)
+}
+
+.body {
+	@apply bg-[length:140%_140%] bg-gradient-to-tr from-slate-900 via-slate-900 to-cyan-900 text-[var(--text)];
+	font-family: system-ui, -apple-system;
+}
+
+.logo {
+	@apply fill-[var(--logo-color)] text-sm;
+}
+
+.logo-footer {
+	@apply fill-[var(--logo-color)] text-sm;
+}
+
+.svg5-logo {
+	@apply w-32 md:w-36 h-fit;
+}
+
+.svg5-footer {
+	@apply w-24 h-fit;
+}
+
+.bg {
+	stroke: hsl(var(--p));
+}
+
+.btn {
+	@apply uppercase;
+}
