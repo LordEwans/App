@@ -58,8 +58,7 @@
                     </div>
                     <div class="collapse-content">
                       <p>
-                        You can only get test tokens once a day for every wallet but
-                        after the alpha, we'll open it to be free flowing.
+                        You can only get test tokens once a day for every wallet.
                       </p>
                     </div>
                   </div>
