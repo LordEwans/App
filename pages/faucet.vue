@@ -1,19 +1,20 @@
 <template>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,700;1,400&display=swap"
-    rel="stylesheet"
-  />
-  <title>BottleHub - Gambling on The Edge</title>
-
+  <Head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </Head>
+  <title>Faucet - Test Tokens for BottleHub</title>
   <div class="body animate-border">
     <div class="lg:flex lg:justify-center lg:items-center min-h-screen">
       <div class="lg:container">
-        <FaucetNav />
-        <div class="w-full min-h-[67vh] flex">
+        <Navigation />
+        <div class="w-full min-h-[67vh] flex items-center justify-center">
           <div class="hero-content max-w-full w-full">
             <div class="text-center">
               <form
@@ -35,9 +36,11 @@
                   Get Token
                 </button>
               </form>
-              <div class="h-[30vh] mt-8 md:mt-16">
+              <div class="mt-8 md:mt-16">
                 <div class="md:max-w-2xl lg:max-w-6xl">
-                  <h2 class="capitalize md:text-4xl font-extrabold">FAQs</h2>
+                  <h2 class="capitalize text-2xl md:text-4xl font-extrabold">
+                    FAQs
+                  </h2>
                   <div class="join join-vertical rounded-2xl">
                     <div class="collapse collapse-arrow bg-base-200">
                       <input
@@ -48,50 +51,43 @@
                       <div class="collapse-title text-xl font-medium">
                         How do I add the token?
                       </div>
-                      <div class="collapse-content">
-                        <p>
-                          After requesting from the faucet, just follow this
-                          instructions here to add the token to your wallet
-                          using 0x153dE0bA5B0DdEb8817C4bc2f6Afd201ae391c48.
-                        </p>
-                      </div>
+                      <p class="collapse-content">
+                        After requesting from the faucet, just follow this
+                        instructions
+                        <a href="https://medium.com" class="link">here</a> to
+                        add the token to your wallet.
+                      </p>
                     </div>
                     <div class="collapse collapse-arrow bg-base-200">
                       <input type="radio" name="my-accordion-2" />
                       <div class="collapse-title text-xl font-medium">
                         Can I request from the faucet again?
                       </div>
-                      <div class="collapse-content">
-                        <p>
-                          You can only get test tokens once a day for every
-                          wallet.
-                        </p>
-                      </div>
+                      <p class="collapse-content">
+                        You can only get test tokens once a day for every
+                        wallet.
+                      </p>
                     </div>
                     <div class="collapse collapse-arrow bg-base-200">
                       <input type="radio" name="my-accordion-2" />
                       <div class="collapse-title text-xl font-medium">
                         What's next for me?
                       </div>
-                      <div class="collapse-content">
-                        <p>
-                          We're currently building the alpha version of the app,
-                          so wait tight. Until then just join the waitlist if
-                          you haven't already to be notified of the launch.
-                        </p>
-                      </div>
+                      <p class="collapse-content">
+                        We're currently building the alpha version of the app,
+                        so wait tight. Until then just join the waitlist if you
+                        haven't already to be notified of the launch.
+                      </p>
                     </div>
                     <div class="collapse collapse-arrow bg-base-200">
                       <input type="radio" name="my-accordion-2" />
                       <div class="collapse-title text-xl font-medium">
                         Why can't I find my tokens anymore?
                       </div>
-                      <div class="collapse-content">
-                        <p>
-                          Please refer to the add token faq and verify if the
-                          token is added to your wallet.
-                        </p>
-                      </div>
+                      <p class="collapse-content">
+                        Please refer to the add token faq and verify if the
+                        token is added to your wallet.
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -108,9 +104,6 @@
 <style>
 .collapse {
   @apply bg-slate-900 join-item;
-}
-.collapse-content {
-  @apply px-0;
 }
 </style>
 

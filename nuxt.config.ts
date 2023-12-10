@@ -7,7 +7,6 @@ export default defineNuxtConfig({
   ],
   app: {
     head: {
-      title: "BottleHub",
       //link: [{ rel: "icon", type: "image/svg", href: "/icon.svg" }],
     },
   },

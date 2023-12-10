@@ -31,9 +31,9 @@
           <div class="justify-self-end hidden lg:flex navbar-end">
             <button
               class="btn btn-outline text-xs mx-6 btn-primary"
-              onclick="waitlist.showModal()"
+              onclick="wip.showModal()"
             >
-              join waitlist
+              Connect Wallet
             </button>
           </div>
           <div class="max-lg:navbar-end">
@@ -68,7 +68,7 @@
         class="drawer-overlay"
       />
       <ul
-        class="menu p-4 w-72 md:w-80 min-h-full bg-slate-900 text-base-content hover:bg-slate-800"
+        class="menu p-4 w-72 md:w-80 min-h-full bg-slate-900 text-base-content"
       >
         <li class="partials">
           <a href="#features" class="partials">Features</a>
@@ -79,11 +79,12 @@
         <li class="partials">
           <a href="#trading" class="partials">Trading</a>
         </li>
-        <a href="/faucets">
-          <label for="waitlist" class="btn text-xs mt-9 mx-6 btn-primary"
-            >faucets</label
-          >
-        </a>
+        <button
+          class="btn text-xs mx-6 btn-primary mt-9"
+          onclick="wip.showModal()"
+        >
+          Connect Wallet
+        </button>
       </ul>
     </div>
   </div>
