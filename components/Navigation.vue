@@ -3,7 +3,7 @@
     <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
     <div class="drawer-content">
       <div class="flex justify-center">
-        <header class="navbar py-[.2em] will-change-transform top-0 w-[96%]">
+        <header class="navbar py-[.2em] will-change-transform top-0 w-[96%] border md:border-0 md:border-t">
           <div class="navbar-start ml-2 md:ml-6 block text-base">
             <a
               href="/"
@@ -68,7 +68,7 @@
         class="drawer-overlay"
       />
       <ul
-        class="menu p-4 w-72 md:w-80 min-h-full bg-slate-900 text-base-content"
+        class="menu p-4 w-72 md:w-80 min-h-full bg-slate-950 text-base-content"
       >
         <li class="partials">
           <a href="#features" class="partials">Features</a>
@@ -101,6 +101,6 @@ li.partials {
   @apply rounded-2xl;
 }
 header {
-  @apply rounded-3xl mt-4 w-[96%] border-t border-[hsl(76,100%,50%)] border-opacity-40;
+  @apply rounded-3xl mt-4 w-[96%] border-[hsl(76,100%,50%)] border-opacity-60;
 }
 </style>

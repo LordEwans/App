@@ -10,7 +10,6 @@
     />
   </Head>
   <title>Faucet - Test Tokens for BottleHub</title>
-  <div class="body animate-border">
     <div class="lg:flex lg:justify-center lg:items-center min-h-screen">
       <div class="lg:container">
         <Navigation />
@@ -98,12 +97,11 @@
         <Footer />
       </div>
     </div>
-  </div>
 </template>
 
 <style>
 .collapse {
-  @apply bg-slate-900 join-item;
+  @apply bg-slate-950 join-item;
 }
 </style>
 

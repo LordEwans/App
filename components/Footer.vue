@@ -53,6 +53,6 @@
 
 <style>
 footer {
-  @apply rounded-3xl mt-4 w-[96%] border-b border-[hsl(76,100%,50%)] border-opacity-40;
+  @apply rounded-3xl mt-4 w-[96%] border-b border-[hsl(76,100%,50%)] border-opacity-60;
 }
 </style>

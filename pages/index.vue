@@ -10,44 +10,44 @@
     />
   </Head>
   <title>BottleHub - Gambling on The Edge</title>
-  <div class="body animate-border">
-    <div class="lg:flex lg:justify-center lg:items-center min-h-screen">
-      <div class="lg:container">
-        <Navigation />
-        <div class="hero w-full min-h-[67vh]">
-          <div class="hero-content max-w-full w-full">
-            <div class="text-center flex justify-center">
-              <div class="md:max-w-2xl lg:max-w-6xl">
+  <div class="lg:flex lg:justify-center lg:items-center min-h-screen">
+    <div class="lg:container">
+      <Navigation />
+      <div class="hero w-full min-h-[67vh]">
+        <div class="hero-content max-w-full w-full">
+          <div class="text-center flex justify-center">
+            <div class="md:max-w-2xl lg:max-w-6xl align-top">
+              <div class="w-full mb-12 md:mb-16">
                 <h1
-                  class="text-2xl mb-6 lg:mb-9 md:text-[clamp(2rem,4vw,4.2rem)] leading-[1.1] capitalize"
+                  class="text-2xl mb-2 lg:mb-9 md:text-[clamp(2rem,4vw,4.2rem)] leading-[1.1] capitalize"
                 >
                   Unparalleled competitive gambling
                 </h1>
                 <h2
-                  class="capitalize text-2xl md:text-[clamp(2.7rem,4vw,4rem)] font-extrabold"
+                  class="capitalize text-3xl md:text-[clamp(2.7rem,4vw,4rem)] font-extrabold"
                 >
                   Experience the bleeding edge
                 </h2>
-                <div class="">
-                  <button
-                    class="btn mt-9 mx-6 btn-primary"
-                    onclick="waitlist.showModal()"
-                  >
-                    join waitlist
-                  </button>
-                  <a
-                    href="https://medium.com/"
-                    target="_blank"
-                    class="btn btn-ghost text-[oklch(var(--p))] hover:bg-transparent hover:underline"
-                    >Learn More</a
-                  >
-                </div>
+              </div>
+              <div class="">
+                <button
+                  class="btn mx-6 btn-primary"
+                  onclick="waitlist.showModal()"
+                >
+                  join waitlist
+                </button>
+                <a
+                  href="https://medium.com/"
+                  target="_blank"
+                  class="btn btn-ghost text-[oklch(var(--p))] hover:bg-transparent hover:underline"
+                  >Learn More</a
+                >
               </div>
             </div>
           </div>
         </div>
-        <Footer />
       </div>
+      <Footer />
     </div>
   </div>
 </template>

@@ -1,6 +1,6 @@
 <template>
   <dialog id="waitlist" class="modal">
-    <div class="modal-box bg-slate-900">
+    <div class="modal-box bg-slate-950">
       <div class="w-full justify-center text-center">
         <h1 class="font-bold text-2xl">
           Welcome to the front lines of the revolution.
