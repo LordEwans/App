@@ -19,7 +19,7 @@
             <div class="md:max-w-2xl lg:max-w-6xl align-top">
               <div class="w-full mb-12 md:mb-16">
                 <h1
-                  class="text-3xl mb-2 lg:mb-9 md:text-[clamp(2rem,4vw,4.2rem)] leading-[1.1] capitalize"
+                  class="text-2xl mb-2 lg:mb-9 md:text-[clamp(2rem,4vw,4.2rem)] leading-[1.1] capitalize"
                 >
                   Unparalleled competitive gambling
                 </h1>
