@@ -20,6 +20,7 @@
           >
             Submit
           </button>
+          <ConactFeedback :formFeedback="(formFeedback as string)" />
         </form>
       </div>
     </div>
