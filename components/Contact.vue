@@ -78,11 +78,7 @@ const submitEmail = async () => {
       "https://mailclient.onrender.com/add",
       {
         method: "post",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        body: { email: email },
+        body: { address: email },
       }
     );
     const data = ref(message);
