@@ -39,6 +39,17 @@ type FormFeedbackType =
   | "success"
   | null;
 
+type ProxyType = {
+  status: number;
+  message: string;
+  data: {
+    error?: string;
+    id?: {
+      InsertedID: string;
+    };
+  };
+};
+
 const email = ref("");
 const consent = ref(true);
 const isLoading = ref(false);
@@ -74,17 +85,16 @@ const submitEmail = async () => {
     formFeedback.value = "success";
     isLoading.value = false;
 
-    const { data: message } = await useFetch(
+    const { data: proxy } = await useFetch(
       "https://mailclient.onrender.com/add",
       {
         method: "post",
         body: { address: email },
       }
     );
-    const data = ref(message);
-    console.log(data.value);
+    const data: Ref<ProxyType> = ref(proxy) as Ref<ProxyType>;
 
-    data.value == "error"
+    data.value.message == "error"
       ? (formFeedback.value = "error")
       : (formFeedback.value = "success");
   }, 4000);
