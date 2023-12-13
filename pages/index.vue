@@ -13,7 +13,7 @@
   <div class="lg:flex lg:justify-center lg:items-center min-h-screen">
     <div class="lg:container">
       <Navigation />
-      <div class="hero w-full min-h-[67vh]">
+      <div class="hero w-full min-h-[65vh] md:min-h-[67vh]">
         <div class="hero-content max-w-full w-full">
           <div class="text-center flex justify-center">
             <div class="md:max-w-2xl lg:max-w-6xl align-top">
