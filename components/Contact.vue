@@ -7,7 +7,7 @@
         </h1>
         <form action="" method="post" class="">
           <input
-            v-model="state.email"
+            v-model="email"
             type="text"
             name="email"
             placeholder="Email"
@@ -16,6 +16,7 @@
           <button
             type="submit"
             class="join-item btn btn-primary w-full rounded-2xl mt-6"
+            @click.prevent="submitEmail"
           >
             Submit
           </button>
@@ -30,15 +31,62 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
+type FormFeedbackType =
+  | "incomplete"
+  | "consent"
+  | "invalid"
+  | "error"
+  | "success"
+  | null;
 
-const state = reactive({
-  email: undefined,
-});
+const email = ref("");
+const consent = ref(true);
+const isLoading = ref(false);
+const formFeedback: Ref<FormFeedbackType> = ref(null);
+const success = ref(true);
 
-const { data: sendData } = await useFetch("mail-list-url", {
-  method: "post",
-  body: { email: state.email },
-});
+const submitEmail = async () => {
+  isLoading.value = true;
+  formFeedback.value = null;
 
-const info = ref(sendData);
+  if (!email.value.trim()) {
+    formFeedback.value = "incomplete";
+    isLoading.value = false;
+    return;
+  }
+
+  const regex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+  if (email.value && !regex.test(email.value)) {
+    formFeedback.value = "invalid";
+    success.value = false;
+    isLoading.value = false;
+    return;
+  }
+
+  if (!consent.value) {
+    formFeedback.value = "consent";
+    success.value = false;
+    isLoading.value = false;
+    return;
+  }
+  setTimeout(async () => {
+    success.value = true;
+    formFeedback.value = "success";
+    isLoading.value = false;
+
+    const { data: message } = await useFetch(
+      "https://mailclient.onrender.com/add",
+      {
+        method: "post",
+        body: { email: email },
+      }
+    );
+    const data = ref(message);
+    console.log(data.value);
+
+    data.value == "error"
+      ? (formFeedback.value = "error")
+      : (formFeedback.value = "success");
+  }, 40000);
+};
 </script>

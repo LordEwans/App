@@ -1,0 +1,1 @@
+export type FormFeedbackType = 'incomplete' | 'consent' | 'invalid' | 'success' | null;

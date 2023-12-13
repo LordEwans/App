@@ -45,7 +45,7 @@
       </nav>
       <aside class="flex w-full justify-between">
         <p class="font-bold">BottleHub DAO <br /></p>
-        <p>Copyright © 2023 - All right reserved</p>
+        <p class="">Copyright © 2023 - All right reserved</p>
       </aside>
     </footer>
   </div>
