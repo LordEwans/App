@@ -16,7 +16,7 @@
           <button
             type="submit"
             class="join-item btn btn-primary w-full rounded-2xl mt-6"
-            @click="submitEmail"
+            @click.prevent="submitEmail"
           >
             Submit
           </button>
@@ -78,6 +78,10 @@ const submitEmail = async () => {
       "https://mailclient.onrender.com/add",
       {
         method: "post",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
         body: { email: email },
       }
     );
@@ -87,6 +91,6 @@ const submitEmail = async () => {
     data.value == "error"
       ? (formFeedback.value = "error")
       : (formFeedback.value = "success");
-  }, 40000);
+  }, 4000);
 };
 </script>
