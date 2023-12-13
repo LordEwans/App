@@ -16,7 +16,7 @@
           <button
             type="submit"
             class="join-item btn btn-primary w-full rounded-2xl mt-6"
-            @click.prevent="submitEmail"
+            @click="submitEmail"
           >
             Submit
           </button>
