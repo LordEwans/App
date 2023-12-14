@@ -61,43 +61,40 @@ const submitEmail = async () => {
   isLoading.value = true;
   formFeedback.value = null;
 
+  const regex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
   if (!email.value.trim()) {
     formFeedback.value = "incomplete";
     isLoading.value = false;
     return;
-  }
-
-  const regex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
-  if (email.value && !regex.test(email.value)) {
+  } else if (email.value && !regex.test(email.value)) {
     formFeedback.value = "invalid";
     success.value = false;
     isLoading.value = false;
     return;
-  }
-
-  if (!consent.value) {
+  } else if (!consent.value) {
     formFeedback.value = "consent";
     success.value = false;
     isLoading.value = false;
     return;
+  } else {
+    setTimeout(async () => {
+      success.value = true;
+      isLoading.value = false;
+
+      const { data: proxy } = await useFetch(
+        "https://mailclient.onrender.com/add",
+        {
+          method: "post",
+          body: { address: email },
+        }
+      );
+      const data: Ref<ProxyType> = ref(proxy) as Ref<ProxyType>;
+
+      email.value = "";
+      data.value.message == "error"
+        ? (formFeedback.value = "error")
+        : (formFeedback.value = "success");
+    }, 4000);
   }
-  setTimeout(async () => {
-    success.value = true;
-    isLoading.value = false;
-
-    const { data: proxy } = await useFetch(
-      "https://mailclient.onrender.com/add",
-      {
-        method: "post",
-        body: { address: email },
-      }
-    );
-    const data: Ref<ProxyType> = ref(proxy) as Ref<ProxyType>;
-
-    email.value = "";
-    data.value.message == "error"
-      ? (formFeedback.value = "error")
-      : (formFeedback.value = "success");
-  }, 4000);
 };
 </script>
