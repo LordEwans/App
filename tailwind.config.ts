@@ -8,6 +8,13 @@ module.exports = {
     "./nuxt.config.{js,ts}",
   ],
   theme: {
+    fontFamily: {
+      sans: ["Montserrat"],
+      serif: ["Montserrat"],
+      mono: ["Montserrat"],
+      display: ["Montserrat"],
+      body: ["Montserrat"],
+    },
     extend: {
       animation: {
         border: "border 9s ease infinite",

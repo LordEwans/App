@@ -24,7 +24,7 @@
                   Unparalleled competitive gambling
                 </h1>
                 <h2
-                  class="capitalize text-3xl md:text-[clamp(2.7rem,4vw,4rem)] font-extrabold"
+                  class="capitalize text-3xl md:text-[clamp(2.7rem,4vw,4rem)] leading-[1.1] font-extrabold"
                 >
                   Experience the bleeding edge
                 </h2>
