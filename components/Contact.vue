@@ -5,7 +5,7 @@
         <h1 class="font-bold text-2xl">
           Welcome to the front lines of the revolution.
         </h1>
-        <form action="" method="post" class="">
+        <form ref="waitlist" action="" method="post" class="">
           <input
             v-model="email"
             type="text"
@@ -83,8 +83,8 @@ const submitEmail = async () => {
   }
   setTimeout(async () => {
     success.value = true;
-    formFeedback.value = "success";
     isLoading.value = false;
+    email.value = "";
 
     const { data: proxy } = await useFetch(
       "https://mailclient.onrender.com/add",
@@ -95,7 +95,7 @@ const submitEmail = async () => {
     );
     const data: Ref<ProxyType> = ref(proxy) as Ref<ProxyType>;
 
-    data.value.message == "error"
+    data.value.message === "error"
       ? (formFeedback.value = "error")
       : (formFeedback.value = "success");
   }, 4000);

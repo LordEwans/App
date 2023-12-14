@@ -1,7 +1,10 @@
 <script lang="ts" setup>
 const props = defineProps({
   formFeedback: String,
+  url: String,
+  message: String,
 });
+const u = "/add";
 </script>
 
 <template>
@@ -16,7 +19,8 @@ const props = defineProps({
     v-else-if="formFeedback === 'success'"
     class="text-white w-full block p-3 mt-4 bg-green-500"
   >
-    Thanks for signing up!
+    You just received 500BTL check out the transaction
+    <a :href="url" class="link" target="_blank">here</a>.
   </div>
 
   <div
@@ -30,14 +34,14 @@ const props = defineProps({
     v-else-if="formFeedback === 'invalid'"
     class="text-white w-full block p-3 mt-4 bg-red-500"
   >
-    Please enter a valid email address.
+    Please enter a valid wallet address.
   </div>
 
   <div
     v-else-if="formFeedback === 'consent'"
     class="text-white w-full block p-3 mt-4 bg-red-500"
   >
-    Please agree to terms and conditions.
+    Please complete the captcha.
   </div>
 </template>
 
