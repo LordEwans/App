@@ -96,5 +96,6 @@ const submitEmail = async () => {
         : (formFeedback.value = "success");
     }, 4000);
   }
+  
 };
 </script>
