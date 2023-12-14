@@ -84,7 +84,6 @@ const submitEmail = async () => {
   setTimeout(async () => {
     success.value = true;
     isLoading.value = false;
-    email.value = "";
 
     const { data: proxy } = await useFetch(
       "https://mailclient.onrender.com/add",
@@ -95,7 +94,8 @@ const submitEmail = async () => {
     );
     const data: Ref<ProxyType> = ref(proxy) as Ref<ProxyType>;
 
-    data.value.message === "error"
+    email.value = "";
+    data.value.message == "error"
       ? (formFeedback.value = "error")
       : (formFeedback.value = "success");
   }, 4000);
