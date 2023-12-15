@@ -46,9 +46,9 @@
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5 fill-[#0069cc]"
+                class="h-5 w-5 fill-[var(--border-color)]"
                 viewBox="0 0 24 24"
-                stroke="#0069cc"
+                stroke="var(--border-color)"
               >
                 <path
                   stroke-linecap="round"
@@ -103,6 +103,6 @@ li.partials {
   @apply rounded-2xl;
 }
 header {
-  @apply rounded-3xl mt-4 w-[96%] border-[hsl(209,100%,40%)] border-opacity-60;
+  @apply rounded-3xl mt-4 w-[96%] border-[var(--border-color)] border-opacity-60;
 }
 </style>
