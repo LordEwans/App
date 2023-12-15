@@ -3,7 +3,9 @@
     <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
     <div class="drawer-content">
       <div class="flex justify-center">
-        <header class="navbar py-[.2em] will-change-transform top-0 w-[96%] border md:border-0 md:border-t">
+        <header
+          class="navbar py-[.2em] will-change-transform top-0 w-[96%] border md:border-0 md:border-t"
+        >
           <div class="navbar-start ml-2 md:ml-6 block text-base">
             <a
               href="/"
@@ -44,9 +46,9 @@
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5 fill-[hsl(76 100% 50%)]"
+                class="h-5 w-5 fill-[#7480FF]"
                 viewBox="0 0 24 24"
-                stroke="hsl(76 100% 50%)"
+                stroke="#7480FF"
               >
                 <path
                   stroke-linecap="round"
@@ -101,6 +103,6 @@ li.partials {
   @apply rounded-2xl;
 }
 header {
-  @apply rounded-3xl mt-4 w-[96%] border-[hsl(76,100%,50%)] border-opacity-60;
+  @apply rounded-3xl mt-4 w-[96%] border-[hsl(235,100%,73%)] border-opacity-60;
 }
 </style>
