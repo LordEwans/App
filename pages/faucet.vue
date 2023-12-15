@@ -37,7 +37,7 @@
             </form>
             <FaucetFeedback
               :formFeedback="(formFeedback as string)"
-              :url="url"
+              :url="(url as string)"
             />
             <div class="mt-8 md:mt-16">
               <div class="md:max-w-2xl lg:max-w-6xl">
@@ -118,7 +118,7 @@ const address = ref("");
 const consent = ref(true);
 const isLoading = ref(false);
 const formFeedback: Ref<FormFeedbackType> = ref(null);
-const url = ref("");
+const url: Ref<string | null> = ref(null);
 const success = ref(true);
 
 const data = ref(null);
@@ -139,13 +139,19 @@ const submitAddress = async () => {
     return;
   }
 
-  /* const regex = /^[A-Z0-9]$/i;
+  if (address.value.length !== 42) {
+    formFeedback.value = "invalid";
+    isLoading.value = false;
+    return;
+  }
+
+  const regex = /^[0x]+[A-Za-z0-9]+$/i;
   if (address.value && !regex.test(address.value)) {
     formFeedback.value = "invalid";
     success.value = false;
     isLoading.value = false;
     return;
-  }*/
+  }
 
   if (!consent.value) {
     formFeedback.value = "consent";
@@ -153,6 +159,7 @@ const submitAddress = async () => {
     isLoading.value = false;
     return;
   }
+  
   setTimeout(async () => {
     console.log("Hey");
     success.value = true;

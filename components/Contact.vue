@@ -40,6 +40,7 @@ type FormFeedbackType =
   | "success"
   | null;
 
+// proxy type
 type ProxyType = {
   status: number;
   message: string;
@@ -51,16 +52,20 @@ type ProxyType = {
   };
 };
 
+// refs
 const email = ref("");
 const consent = ref(true);
 const isLoading = ref(false);
 const formFeedback: Ref<FormFeedbackType> = ref(null);
 const success = ref(true);
 
+// email submit function
 const submitEmail = async () => {
   isLoading.value = true;
   formFeedback.value = null;
-
+  
+  email.value = email.value.trim();
+  
   const regex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
   if (!email.value.trim()) {
     formFeedback.value = "incomplete";
@@ -77,6 +82,7 @@ const submitEmail = async () => {
     isLoading.value = false;
     return;
   } else {
+    // wait 4 seconds then submit
     setTimeout(async () => {
       success.value = true;
       isLoading.value = false;

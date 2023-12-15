@@ -16,7 +16,7 @@ const u = "/add";
   </div>
 
   <div
-    v-else-if="formFeedback === 'success'"
+    v-else-if="formFeedback === 'success' || url"
     class="text-white w-full block p-3 mt-4 bg-green-500"
   >
     You just received 500BTL check out the transaction
