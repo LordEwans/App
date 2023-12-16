@@ -105,4 +105,11 @@ li.partials {
 header {
   @apply rounded-3xl mt-4 w-[96%] border-[var(--border-color)] border-opacity-60;
 }
+.drawer-side {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.drawer-side::-webkit-scrollbar {
+  display: none;
+}
 </style>
