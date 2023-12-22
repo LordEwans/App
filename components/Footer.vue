@@ -5,7 +5,7 @@
     >
       <nav>
         <div class="grid grid-flow-col gap-6 text-[var(--text)]">
-          <a href="https://x.com/" target="_blank"
+          <a href="https://x.com/BottleHub_DApp" target="_blank"
             ><svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -44,7 +44,7 @@
         </div>
       </nav>
       <aside class="flex w-full justify-between">
-        <p class="font-bold">BottleHub DAO <br /></p>
+        <p class="font-bold">BottleHub DApp <br /></p>
         <p class="">Copyright © 2023 - All right reserved</p>
       </aside>
     </footer>
