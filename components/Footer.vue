@@ -43,7 +43,7 @@
           ></a>
         </div>
       </nav>
-      <aside class="flex w-full text-xs md:text-sm justify-between">
+      <aside class="flex max-lg:flex-col max-lg:items-center w-full text-xs md:text-sm justify-between">
         <p class="font-bold">BottleHub DApp <br /></p>
         <p class="">Copyright © 2023 - All right reserved</p>
       </aside>
