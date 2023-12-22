@@ -70,7 +70,7 @@
         class="drawer-overlay"
       />
       <ul
-        class="menu p-4 w-72 md:w-80 min-h-full bg-slate-950 text-base-content"
+        class="menu p-4 w-[70%] md:w-80 min-h-full bg-slate-950 text-base-content"
       >
         <li class="partials">
           <a href="#features" class="partials">Features</a>
