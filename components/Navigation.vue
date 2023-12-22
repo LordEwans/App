@@ -41,12 +41,12 @@
           <div class="max-lg:navbar-end">
             <label
               for="my-drawer-4"
-              class="drawer-button btn btn-ghost text-xs btn-primary lg:hidden"
+              class="drawer-button btn btn-ghost text-s btn-primary lg:hidden"
               style="--tw-bg-opacity: 0"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5 fill-[var(--border-color)]"
+                class="h-7 w-7 fill-[var(--border-color)]"
                 viewBox="0 0 24 24"
                 stroke="var(--border-color)"
               >
