@@ -2,12 +2,15 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ["@nuxtjs/tailwindcss"],
-  css: [
-    "@/assets/css/main.pcss",
-  ],
+  css: ["@/assets/css/main.pcss"],
   app: {
     head: {
       link: [{ rel: "icon", type: "image/svg", href: "/logo.svg" }],
+    },
+  },
+  runtimeConfig: {
+    public: {
+      projectId: process.env.WALLET_CONNECT_KEY,
     },
   },
 });

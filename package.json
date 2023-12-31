@@ -17,7 +17,7 @@
     "vue-router": "^4.2.5"
   },
   "dependencies": {
-    "@web3modal/ethers5": "^3.5.3",
+    "@web3modal/ethers": "^3.5.3",
     "daisyui": "latest",
     "dotenv": "^16.3.1",
     "ethers": "^6.9.0"
