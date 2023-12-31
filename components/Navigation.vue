@@ -33,7 +33,7 @@ createWeb3Modal({
     "--w3m-border-radius-master": "2px",
     "--w3m-accent": "#0099ffff",
     "--w3m-color-mix": "#020617",
-    "--w3m-color-mix-strength": 65,
+    "--w3m-color-mix-strength": 60,
   },
   tokens: {
     11155111: {
