@@ -19,8 +19,9 @@
   "dependencies": {
     "@vue/server-renderer": "^3.4.3",
     "@web3modal/ethers": "^3.5.3",
+    "@web3modal/ethers5": "^3.5.3",
     "daisyui": "latest",
     "dotenv": "^16.3.1",
-    "ethers": "^6.9.0"
+    "ethers": "5.7.2"
   }
 }

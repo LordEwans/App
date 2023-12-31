@@ -3,7 +3,7 @@ import {
   createWeb3Modal,
   defaultConfig,
   useWeb3Modal,
-} from "@web3modal/ethers/vue";
+} from "@web3modal/ethers5/vue";
 
 const config = useRuntimeConfig();
 const projectId = config.public.projectId as string;
