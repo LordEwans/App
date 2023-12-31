@@ -1,49 +1,5 @@
 <script lang="ts" setup>
-import {
-  createWeb3Modal,
-  defaultConfig,
-  useWeb3Modal,
-} from "@web3modal/ethers/vue";
 
-const config = useRuntimeConfig();
-const projectId = config.public.projectId as string;
-
-const mainnet = {
-  chainId: 11155111,
-  name: "Sepolia",
-  currency: "ETH",
-  explorerUrl: "https://sepolia.etherscan.io",
-  rpcUrl: "https://ethereum-sepolia.publicnode.com",
-};
-
-const metadata = {
-  name: "BottleHub DApp",
-  description: "My Website description",
-  url: "https:/bottlehub.vercel.app",
-  icons: ["https:/bottlehub.vercel.app/logo.svg"],
-};
-
-createWeb3Modal({
-  ethersConfig: defaultConfig({ metadata }),
-  chains: [mainnet],
-  projectId,
-  themeMode: "dark",
-  themeVariables: {
-    "--w3m-font-family": "Gemsbuck",
-    "--w3m-border-radius-master": "2px",
-    "--w3m-accent": "#0099ffff",
-    "--w3m-color-mix": "#020617",
-    "--w3m-color-mix-strength": 60,
-  },
-  tokens: {
-    11155111: {
-      address: "0x153dE0bA5B0DdEb8817C4bc2f6Afd201ae391c48",
-      image: "https:/bottlehub.vercel.app/logo.svg",
-    },
-  },
-});
-
-const modal = useWeb3Modal();
 </script>
 
 <template>
@@ -81,7 +37,6 @@ const modal = useWeb3Modal();
           <div class="justify-self-end hidden lg:flex navbar-end">
             <button
               class="btn btn-outline text-xs mx-6 btn-primary"
-              @click="modal.open()"
             >
               Connect Wallet
             </button>
@@ -129,7 +84,7 @@ const modal = useWeb3Modal();
         <li class="partials">
           <a href="#trading" class="partials">Trading</a>
         </li>
-        <button class="btn text-xs mx-6 btn-primary mt-9" @click="modal.open()">
+        <button class="btn text-xs mx-6 btn-primary mt-9">
           Connect Wallet
         </button>
       </ul>
