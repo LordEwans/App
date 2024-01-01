@@ -3,6 +3,7 @@ const props = defineProps({
   formFeedback: String,
   url: String,
   message: String,
+  isLoading: Boolean,
 });
 const u = "/add";
 </script>
@@ -16,11 +17,18 @@ const u = "/add";
   </div>
 
   <div
-    v-else-if="formFeedback === 'success' || url"
+    v-else-if="formFeedback === 'success' && url"
     class="text-white w-full block p-3 mt-4 bg-green-500"
   >
     You just received 500BTL check out the transaction
     <a :href="url" class="link" target="_blank">here</a>.
+  </div>
+
+  <div
+    v-else-if="isLoading"
+    class="text-white w-full block p-3 mt-4 bg-blue-500"
+  >
+    <span class="loading loading-infinity loading-md"></span>
   </div>
 
   <div

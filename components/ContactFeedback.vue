@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 const props = defineProps({
   formFeedback: String,
+  isLoading: Boolean,
 });
 </script>
 
@@ -17,6 +18,13 @@ const props = defineProps({
     class="text-white w-full block p-3 mt-4 bg-green-500"
   >
     Thanks for signing up!
+  </div>
+
+  <div
+    v-else-if="isLoading"
+    class="text-white w-full block p-3 mt-4 bg-blue-500"
+  >
+    <span class="loading loading-infinity loading-md"></span>
   </div>
 
   <div

@@ -38,6 +38,7 @@
             <FaucetFeedback
               :formFeedback="(formFeedback as string)"
               :url="(url as string)"
+              :isLoading="isLoading"
             />
             <div class="mt-8 md:mt-16">
               <div class="md:max-w-2xl lg:max-w-6xl">
@@ -132,48 +133,50 @@ const submitAddress = async () => {
       message: string;
     };
   };
+  const regex = /^[0x]+[A-Za-z0-9]+$/i;
 
   if (!address.value.trim()) {
     formFeedback.value = "incomplete";
     isLoading.value = false;
     return;
-  }
-
-  if (address.value.length !== 42) {
+  } else if (address.value.length !== 42) {
     formFeedback.value = "invalid";
     isLoading.value = false;
     return;
-  }
-
-  const regex = /^[0x]+[A-Za-z0-9]+$/i;
-  if (address.value && !regex.test(address.value)) {
+  } else if (address.value && !regex.test(address.value)) {
     formFeedback.value = "invalid";
     success.value = false;
     isLoading.value = false;
     return;
-  }
-
-  if (!consent.value) {
+  } else if (!consent.value) {
     formFeedback.value = "consent";
     success.value = false;
     isLoading.value = false;
     return;
-  }
-  
-  setTimeout(async () => {
-    console.log("Hey");
-    success.value = true;
-    isLoading.value = false;
-    console.log(address.value);
-    const { data: sendData } = await useFetch("/api/transfer", {
-      method: "post",
-      body: { address: address.value },
-    });
+  } else {
+    setTimeout(async () => {
+      try {
+        const { data: sendData } = await useFetch("/api/transfer", {
+          method: "post",
+          body: { address: address.value },
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
 
-    const data: Ref<SendData> = ref(sendData) as Ref<SendData>;
-    formFeedback.value = "success";
-    url.value = data.value.sendData.url;
-    address.value = "";
-  }, 4000);
+        const data: Ref<SendData> = ref(sendData) as Ref<SendData>;
+        formFeedback.value = "success";
+        success.value = true;
+        isLoading.value = false;
+        url.value = data.value.sendData.url;
+        address.value = "";
+      } catch (error) {
+        formFeedback.value = "error";
+        success.value = false;
+        isLoading.value = false;
+        address.value = "";
+      }
+    }, 4000);
+  }
 };
 </script>

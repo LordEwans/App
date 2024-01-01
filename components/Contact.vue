@@ -20,7 +20,10 @@
           >
             Submit
           </button>
-          <ConactFeedback :formFeedback="(formFeedback as string)" />
+          <ContactFeedback
+            :formFeedback="(formFeedback as string)"
+            :isLoading="isLoading"
+          />
         </form>
       </div>
     </div>
@@ -63,9 +66,9 @@ const success = ref(true);
 const submitEmail = async () => {
   isLoading.value = true;
   formFeedback.value = null;
-  
+
   email.value = email.value.trim();
-  
+
   const regex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
   if (!email.value.trim()) {
     formFeedback.value = "incomplete";
@@ -84,22 +87,27 @@ const submitEmail = async () => {
   } else {
     // wait 4 seconds then submit
     setTimeout(async () => {
-      success.value = true;
-      isLoading.value = false;
+      try {
+        const { data: proxy } = await useFetch(
+          "https://mailclient.onrender.com/add",
+          {
+            method: "post",
+            body: { address: email },
+          }
+        );
+        const data: Ref<ProxyType> = ref(proxy) as Ref<ProxyType>;
 
-      const { data: proxy } = await useFetch(
-        "https://mailclient.onrender.com/add",
-        {
-          method: "post",
-          body: { address: email },
-        }
-      );
-      const data: Ref<ProxyType> = ref(proxy) as Ref<ProxyType>;
-
-      email.value = "";
-      data.value.message == "error"
-        ? (formFeedback.value = "error")
-        : (formFeedback.value = "success");
+        email.value = "";
+        success.value = true;
+        isLoading.value = false;
+        data.value.message == "error"
+          ? (formFeedback.value = "error")
+          : (formFeedback.value = "success");
+      } catch (error) {
+        success.value = false;
+        isLoading.value = false;
+        formFeedback.value = "error";
+      }
     }, 4000);
   }
 };

@@ -1,3 +1,55 @@
+<script lang="ts" setup>
+import { getAccount, watchAccount } from "@wagmi/core";
+import {
+  createWeb3Modal,
+  defaultWagmiConfig,
+  useWeb3Modal,
+  useWeb3ModalState,
+} from "@web3modal/wagmi/vue";
+import { sepolia, arbitrum } from "viem/chains";
+
+const config = useRuntimeConfig();
+const projectId = config.public.projectId as string;
+
+const metadata = {
+  name: "BottleHub DApp",
+  description: "My Website description",
+  url: "https:/bottlehub.vercel.app",
+  icons: ["https:/bottlehub.vercel.app/logo.svg"],
+};
+
+const chains = [sepolia, arbitrum];
+const wagmiConfig = defaultWagmiConfig({ chains, projectId, metadata });
+
+createWeb3Modal({
+  wagmiConfig,
+  projectId,
+  chains,
+  themeMode: "dark",
+  themeVariables: {
+    "--w3m-font-family": "Gemsbuck",
+    "--w3m-border-radius-master": "2px",
+    "--w3m-accent": "#",
+    "--w3m-color-mix": "#020617",
+    "--w3m-color-mix-strength": 65,
+  },
+  tokens: {
+    11155111: {
+      address: "0x153dE0bA5B0DdEb8817C4bc2f6Afd201ae391c48",
+      image: "https:/bottlehub.vercel.app/logo.svg",
+    },
+  },
+});
+
+const modal = useWeb3Modal();
+const router = useRouter();
+const isConnected = ref(getAccount().isConnected);
+
+const unwatch = watchAccount(
+  (account) => (isConnected.value = account.isConnected)
+);
+</script>
+
 <template>
   <div class="drawer drawer-end">
     <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
@@ -33,20 +85,24 @@
           <div class="justify-self-end hidden lg:flex navbar-end">
             <button
               class="btn btn-outline text-xs mx-6 btn-primary"
-              onclick="wip.showModal()"
+              v-if="!isConnected"
+              @click="modal.open()"
             >
               Connect Wallet
             </button>
+            <div v-else>
+              <w3m-account-button />
+            </div>
           </div>
           <div class="max-lg:navbar-end">
             <label
               for="my-drawer-4"
-              class="drawer-button btn btn-ghost text-xs btn-primary lg:hidden"
+              class="drawer-button btn btn-ghost text-s btn-primary lg:hidden"
               style="--tw-bg-opacity: 0"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5 fill-[var(--border-color)]"
+                class="h-6 w-6 fill-[var(--border-color)]"
                 viewBox="0 0 24 24"
                 stroke="var(--border-color)"
               >
@@ -70,7 +126,7 @@
         class="drawer-overlay"
       />
       <ul
-        class="menu p-4 w-72 md:w-80 min-h-full bg-slate-950 text-base-content"
+        class="menu p-4 w-[70%] md:w-80 min-h-full bg-slate-950 text-base-content"
       >
         <li class="partials">
           <a href="#features" class="partials">Features</a>
@@ -81,12 +137,18 @@
         <li class="partials">
           <a href="#trading" class="partials">Trading</a>
         </li>
-        <button
-          class="btn text-xs mx-6 btn-primary mt-9"
-          onclick="wip.showModal()"
-        >
-          Connect Wallet
-        </button>
+        <div>
+          <button
+            class="btn btn-outline text-xs mx-6 btn-primary mt-9"
+            v-if="!isConnected"
+            @click="modal.open()"
+          >
+            Connect Wallet
+          </button>
+          <div class="mt-9" v-else>
+            <w3m-account-button />
+          </div>
+        </div>
       </ul>
     </div>
   </div>

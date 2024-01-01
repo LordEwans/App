@@ -12,9 +12,8 @@ export default defineEventHandler(async (event) => {
 });
 
 async function sendToken(toAddress: string) {
-  console.log(toAddress)
   config({ path: "/path/to/.env" });
-  
+
   const tokenContract = "0x153dE0bA5B0DdEb8817C4bc2f6Afd201ae391c48";
 
   const network = process.env.ETHEREUM_NETWORK;
@@ -32,19 +31,28 @@ async function sendToken(toAddress: string) {
 
   // Creating and sending the transaction object
 
-  const tx = await signer.sendTransaction({
-    to: tokenContract,
-    from: signer.address,
-    value: ethers.parseUnits("0.000", "ether"),
-    data: data,
-  });
+  try {
+    const tx = await signer.sendTransaction({
+      to: tokenContract,
+      from: signer.address,
+      value: ethers.parseUnits("0.000", "ether"),
+      data: data,
+    });
 
-  const receipt = await tx.wait();
+    const receipt = await tx.wait();
 
-  let hashData = {
-    url: `https://${network}.etherscan.io/tx/${tx.hash}`,
-    message: `Mined in block ${receipt!.blockNumber}`,
-  };
+    let hashData = {
+      url: `https://${network}.etherscan.io/tx/${tx.hash}`,
+      message: `Mined in block ${receipt!.blockNumber}`,
+    };
 
-  return hashData;
+    return hashData;
+  } catch (error) {
+    let hashData = {
+      url: "",
+      message: `Error: ${error}`,
+    };
+
+    return hashData;
+  }
 }
