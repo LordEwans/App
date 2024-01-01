@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { getAccount } from "@wagmi/core";
 import {
   createWeb3Modal,
   defaultWagmiConfig,
@@ -9,14 +10,6 @@ import { sepolia, arbitrum } from "viem/chains";
 const config = useRuntimeConfig();
 const projectId = config.public.projectId as string;
 
-const mainnet = {
-  chainId: 11155111,
-  name: "Sepolia",
-  currency: "ETH",
-  explorerUrl: "https://sepolia.etherscan.io",
-  rpcUrl: "https://ethereum-sepolia.publicnode.com",
-};
-
 const metadata = {
   name: "BottleHub DApp",
   description: "My Website description",
@@ -24,7 +17,7 @@ const metadata = {
   icons: ["https:/bottlehub.vercel.app/logo.svg"],
 };
 
-const chains = [sepolia];
+const chains = [sepolia, arbitrum];
 const wagmiConfig = defaultWagmiConfig({ chains, projectId, metadata });
 
 createWeb3Modal({
@@ -35,7 +28,7 @@ createWeb3Modal({
   themeVariables: {
     "--w3m-font-family": "Gemsbuck",
     "--w3m-border-radius-master": "2px",
-    "--w3m-accent": "#0099ffff",
+    "--w3m-accent": "#",
     "--w3m-color-mix": "#020617",
     "--w3m-color-mix-strength": 65,
   },
@@ -47,6 +40,7 @@ createWeb3Modal({
   },
 });
 
+const account = getAccount();
 const modal = useWeb3Modal();
 </script>
 
