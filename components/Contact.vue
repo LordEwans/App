@@ -20,7 +20,7 @@
           >
             Submit
           </button>
-          <ConactFeedback
+          <ContactFeedback
             :formFeedback="(formFeedback as string)"
             :isLoading="isLoading"
           />

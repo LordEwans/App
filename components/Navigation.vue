@@ -1,9 +1,10 @@
 <script lang="ts" setup>
-import { getAccount } from "@wagmi/core";
+import { getAccount, watchAccount } from "@wagmi/core";
 import {
   createWeb3Modal,
   defaultWagmiConfig,
   useWeb3Modal,
+  useWeb3ModalState,
 } from "@web3modal/wagmi/vue";
 import { sepolia, arbitrum } from "viem/chains";
 
@@ -40,8 +41,13 @@ createWeb3Modal({
   },
 });
 
-const account = getAccount();
 const modal = useWeb3Modal();
+const router = useRouter();
+const isConnected = ref(getAccount().isConnected);
+
+const unwatch = watchAccount(
+  (account) => (isConnected.value = account.isConnected)
+);
 </script>
 
 <template>
@@ -79,10 +85,14 @@ const modal = useWeb3Modal();
           <div class="justify-self-end hidden lg:flex navbar-end">
             <button
               class="btn btn-outline text-xs mx-6 btn-primary"
+              v-if="!isConnected"
               @click="modal.open()"
             >
               Connect Wallet
             </button>
+            <div v-else>
+              <w3m-account-button />
+            </div>
           </div>
           <div class="max-lg:navbar-end">
             <label
@@ -127,9 +137,18 @@ const modal = useWeb3Modal();
         <li class="partials">
           <a href="#trading" class="partials">Trading</a>
         </li>
-        <button class="btn text-xs mx-6 btn-primary mt-9" @click="modal.open()">
-          Connect Wallet
-        </button>
+        <div>
+          <button
+            class="btn btn-outline text-xs mx-6 btn-primary mt-9"
+            v-if="!isConnected"
+            @click="modal.open()"
+          >
+            Connect Wallet
+          </button>
+          <div class="mt-9" v-else>
+            <w3m-account-button />
+          </div>
+        </div>
       </ul>
     </div>
   </div>
