@@ -1,9 +1,10 @@
 <script lang="ts" setup>
 import {
   createWeb3Modal,
-  defaultConfig,
+  defaultWagmiConfig,
   useWeb3Modal,
-} from "@web3modal/ethers/vue";
+} from "@web3modal/wagmi/vue";
+import { sepolia, arbitrum } from "viem/chains";
 
 const config = useRuntimeConfig();
 const projectId = config.public.projectId as string;
@@ -23,10 +24,13 @@ const metadata = {
   icons: ["https:/bottlehub.vercel.app/logo.svg"],
 };
 
+const chains = [sepolia];
+const wagmiConfig = defaultWagmiConfig({ chains, projectId, metadata });
+
 createWeb3Modal({
-  ethersConfig: defaultConfig({ metadata }),
-  chains: [mainnet],
+  wagmiConfig,
   projectId,
+  chains,
   themeMode: "dark",
   themeVariables: {
     "--w3m-font-family": "Gemsbuck",
