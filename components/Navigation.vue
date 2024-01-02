@@ -4,7 +4,6 @@ import {
   createWeb3Modal,
   defaultWagmiConfig,
   useWeb3Modal,
-  useWeb3ModalState,
 } from "@web3modal/wagmi/vue";
 import { sepolia, arbitrum } from "viem/chains";
 

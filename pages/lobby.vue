@@ -10,13 +10,12 @@
     />
   </Head>
   <title>BottleHub - Gambling on The Edge</title>
-  <div class="md:flex md:justify-center md:min-h-screen">
-    <div class="grid grid-cols-1 md:grid-cols-2 md:h-screen">
-      <div
-        class="flex h-[89vh] md:h-[97vh] w- max-md:justify-center md:items-center max-md:bottom-0 md:left-0 my-[1vh]"
-      >
-      </div>
+  <div class="h-screen flex">
+    <div class="w-24 flex justify-center items-center">
       <AppNavigation />
+    </div>
+    <div class="w-full flex justify-center items-center">
+      <AppHub />
     </div>
   </div>
 </template>
