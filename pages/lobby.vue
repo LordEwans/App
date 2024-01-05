@@ -15,7 +15,7 @@
       <AppNavigation />
     </div>
     <div class="w-full flex justify-center items-center">
-      <AppHub />
+    <AppHub />
     </div>
   </div>
 </template>

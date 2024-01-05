@@ -5,7 +5,7 @@ import {
   defaultWagmiConfig,
   useWeb3Modal,
 } from "@web3modal/wagmi/vue";
-import { sepolia, arbitrum } from "viem/chains";
+import { polygonMumbai, polygon } from "viem/chains";
 
 const config = useRuntimeConfig();
 const projectId = config.public.projectId as string;
@@ -17,7 +17,7 @@ const metadata = {
   icons: ["https:/bottlehub.vercel.app/logo.svg"],
 };
 
-const chains = [sepolia, arbitrum];
+const chains = [polygonMumbai, polygon];
 const wagmiConfig = defaultWagmiConfig({ chains, projectId, metadata });
 
 createWeb3Modal({
@@ -33,8 +33,8 @@ createWeb3Modal({
     "--w3m-color-mix-strength": 65,
   },
   tokens: {
-    11155111: {
-      address: "0x153dE0bA5B0DdEb8817C4bc2f6Afd201ae391c48",
+    80001: {
+      address: "0x8318312dE65409CB61dF940a821C710e24843e62",
       image: "https:/bottlehub.vercel.app/logo.svg",
     },
   },
