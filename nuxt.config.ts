@@ -4,8 +4,6 @@ export default defineNuxtConfig({
   modules: ["@nuxtjs/tailwindcss", "nuxt-security", "@nuxt/devtools"],
   security: {
     headers: {
-      crossOriginEmbedderPolicy: "require-corp",
-      crossOriginOpenerPolicy: "same-origin"
       //process.env.NODE_ENV === "development" ? "unsafe-none" : "require-corp",
     },
   },
