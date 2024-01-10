@@ -1,7 +1,13 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ["@nuxtjs/tailwindcss"],
+  modules: ["@nuxtjs/tailwindcss", "nuxt-security", "@nuxt/devtools"],
+  security: {
+    headers: {
+      crossOriginEmbedderPolicy: "require-corp",
+      //process.env.NODE_ENV === "development" ? "unsafe-none" : "require-corp",
+    },
+  },
   css: ["@/assets/css/main.pcss"],
   app: {
     head: {
