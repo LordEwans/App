@@ -50,4 +50,5 @@ window.modal3 = useWeb3Modal();
     width="1280"
     title="Iframe Example"
   ></iframe>
+  <img src="assets/icons/infrastructure_transparent.png" alt="">
 </template>
