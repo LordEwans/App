@@ -37,5 +37,15 @@ export default defineNuxtConfig({
         },
       },
     },
+    "/games/**/**": {
+      static: true,
+      ssr: false,
+      security: {
+        headers: {
+          crossOriginEmbedderPolicy: "require-corp",
+          crossOriginOpenerPolicy: "same-origin",
+        },
+      },
+    },
   },
 });
