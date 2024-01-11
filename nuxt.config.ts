@@ -1,6 +1,20 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: true },
+  devtools: {
+    enabled: true,
+
+    timeline: {
+      enabled: true,
+    },
+  },
+  security: {
+    headers: {
+      crossOriginEmbedderPolicy: false,
+      crossOriginOpenerPolicy: false,
+      originAgentCluster: false,
+      contentSecurityPolicy: false,
+    },
+  },
   modules: ["@nuxtjs/tailwindcss", "@nuxt/devtools", "nuxt-security"],
   css: ["@/assets/css/main.pcss"],
   app: {
@@ -17,6 +31,12 @@ export default defineNuxtConfig({
     "/game/**": {
       static: true,
       ssr: false,
-    }
-  }
+      security: {
+        headers: {
+          crossOriginEmbedderPolicy: "require-corp",
+          crossOriginOpenerPolicy: "unsafe-none",
+        },
+      },
+    },
+  },
 });
