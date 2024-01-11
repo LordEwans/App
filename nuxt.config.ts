@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ["@nuxtjs/tailwindcss", "@nuxt/devtools"],
+  modules: ["@nuxtjs/tailwindcss", "@nuxt/devtools", "nuxt-security"],
   css: ["@/assets/css/main.pcss"],
   app: {
     head: {
