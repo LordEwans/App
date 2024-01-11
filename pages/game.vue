@@ -10,4 +10,6 @@
   </div>
 </template>
 
-<script></script>
+<script>
+console.log("SharedArrayBuffer" in window)
+</script>

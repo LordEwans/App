@@ -33,7 +33,7 @@ export default defineNuxtConfig({
       security: {
         headers: {
           crossOriginEmbedderPolicy: "require-corp",
-          crossOriginOpenerPolicy: "unsafe-none",
+          crossOriginOpenerPolicy: "same-origin",
         },
       },
     },
