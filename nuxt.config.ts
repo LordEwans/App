@@ -2,7 +2,6 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ["@nuxtjs/tailwindcss", "@nuxt/devtools"],
- 
   css: ["@/assets/css/main.pcss"],
   app: {
     head: {
@@ -14,4 +13,10 @@ export default defineNuxtConfig({
       projectId: process.env.WALLET_CONNECT_KEY,
     },
   },
+  routeRules: {
+    "/game/**": {
+      static: true,
+      ssr: false,
+    }
+  }
 });

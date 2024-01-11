@@ -51,10 +51,10 @@ const unwatch = watchAccount(
 
 <template>
   <div
-    class="border-b border-0 rounded-3xl border-[var(--border-color)] border-opacity-60 fixed h-[96vh] w-[92%] m-0 flex flex-col"
+    class="border-0 rounded-3xl border-[var(--border-color)] border-opacity-60 fixed h-[96vh] w-[92%] m-0 flex flex-col"
   >
     <div
-      class="border-t border-0 rounded-3xl border-[var(--border-color)] border-opacity-60 navbar absolute will-change-transform top-0 w-full"
+      class="border-0 rounded-3xl border-[var(--border-color)] border-opacity-60 navbar absolute will-change-transform top-0 w-full"
     >
       <div class="navbar-start ml-2 md:ml-6 block text-base"></div>
       <div class="justify-self-end hidden md:flex navbar-end">
@@ -70,36 +70,36 @@ const unwatch = watchAccount(
         </div>
       </div>
     </div>
-    <div class="h-[63vh] w-full flex justify-center items-center">
-      <div
-        class="carousel w-[99%] h-fit border -0 rounded-3xl border-primary border-opacity-60"
-      >
+    <div class="h-[53vh] w-full flex justify-center items-center">
+      <div class="carousel w-[99%] h-fit rounded-3xl">
         <div
-          class="h-[60vh] w-full bg-slate-900 carousel-item"
-          id="item1"
+          class="border-t border-l rounded-none rounded-tl-3xl border-primary border-opacity-60 absolute w-12 h-12"
         ></div>
         <div
-          class="h-[60vh] w-full bg-slate-800 carousel-item carousel-center"
+          class="border-b border-l rounded-none rounded-bl-3xl border-primary border-opacity-60 absolute w-12 h-12 mt-32"
+        ></div>
+        <div
+          class="border-t border-r rounded-none rounded-tr-3xl border-primary border-opacity-60 absolute w-12 h-12 ml-32"
+        ></div>
+        <div
+          class="border-b border-r rounded-none rounded-br-3xl border-primary border-opacity-60 absolute w-12 h-12 mt-32 ml-32"
+        ></div>
+        <div class="h-[50vh] w-full bg-slate-900 carousel-item" id="item1">
+          <div
+            class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+          >
+            <a href="#item3" class="btn btn-circle">❮</a>
+            <a href="#item2" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div
+          class="h-[50vh] w-full bg-slate-800 carousel-item carousel-center"
           id="item2"
         ></div>
         <div
-          class="h-[60vh] w-full bg-slate-700 carousel-item carousel-end"
+          class="h-[50vh] w-full bg-slate-700 carousel-item carousel-end"
           id="item3"
         ></div>
-      </div>
-      <div class="absolute mt-[56vh] flex justify-center w-full gap-2">
-        <a
-          href="#item1"
-          class="rounded-full border h-3 w-3 border-primary"
-        ></a>
-        <a
-          href="#item2"
-          class="rounded-full border h-3 w-3 border-primary"
-        ></a>
-        <a
-          href="#item3"
-          class="rounded-full border h-3 w-3 border-primary"
-        ></a>
       </div>
     </div>
   </div>
