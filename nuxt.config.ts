@@ -37,7 +37,7 @@ export default defineNuxtConfig({
         },
       },
     },
-    "/games/**/**": {
+    "/games/**": {
       static: true,
       ssr: false,
       security: {
