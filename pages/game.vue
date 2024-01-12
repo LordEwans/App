@@ -5,7 +5,7 @@
       src="games/demo/index.html"
       frameborder="0"
       width="100%"
-      crossorigin
+      credentialless
       height="100%"
     ></iframe>
   </div>
