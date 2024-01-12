@@ -41,9 +41,6 @@ createWeb3Modal({
 });
 
 window.modal3 = useWeb3Modal();
-const open = () => {
-  window.modal3.open()
-}
 const router = useRouter();
 const isConnected = ref(getAccount().isConnected);
 
@@ -55,10 +52,11 @@ const unwatch = watchAccount(
   <title>Games</title>
   <div class="h-screen w-full flex items-center justify-center">
     <iframe
-      src="games/demo/index.html"
+      src="/games/demo/index.html"
       frameborder="0"
       width="100%"
       credentialless
+      draggable="true"
       height="100%"
     ></iframe>
   </div>
