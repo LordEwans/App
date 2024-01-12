@@ -67,10 +67,12 @@ export default defineNuxtConfig({
     },
   },
   vite: {
-    server: {
-      headers: {
-        "Access-Control-Allow-Origin": "*",
-        "Cross-Origin-Embedder-Policy": "require-corp",
+    $client: {
+      server: {
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+          "Cross-Origin-Embedder-Policy": "require-corp",
+        },
       },
     },
   },
