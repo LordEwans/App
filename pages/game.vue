@@ -52,11 +52,16 @@ const unwatch = watchAccount(
   <title>Games</title>
   <div class="h-screen w-full flex items-center justify-center">
     <iframe
-      src="/games/demo/index.html"
+      src="/game/demo/index.html"
       frameborder="0"
+      allowfullscreen="true"
+      scrolling="no"
+      allow="autoplay; fullscreen *; geolocation; microphone; camera; midi; monetization; xr-spatial-tracking; gamepad; gyroscope; accelerometer; xr; cross-origin-isolated"
+      allowtransparency="true"
+      webkitallowfullscreen="true"
+      mozallowfullscreen="true"
+      msallowfullscreen="true"
       width="100%"
-      credentialless
-      draggable="true"
       height="100%"
     ></iframe>
   </div>
