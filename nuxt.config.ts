@@ -55,5 +55,15 @@ export default defineNuxtConfig({
         },
       },
     },
+    "/lobby/**": {
+      static: true,
+      ssr: false,
+      security: {
+        headers: {
+          crossOriginEmbedderPolicy: "require-corp",
+          crossOriginOpenerPolicy: "same-origin",
+        },
+      },
+    },
   },
 });

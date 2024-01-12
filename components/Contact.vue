@@ -2,9 +2,9 @@
   <dialog id="waitlist" class="modal">
     <div class="modal-box bg-slate-950">
       <div class="w-full justify-center text-center">
-        <h1 class="font-bold text-2xl">
+        <h2 class="font-bold text-2xl">
           Welcome to the front lines of the revolution.
-        </h1>
+        </h2>
         <form ref="waitlist" action="" method="post" class="">
           <input
             v-model="email"

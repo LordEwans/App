@@ -2,7 +2,10 @@
   <Head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Unparalleled competitive gambling" />
+    <meta
+      name="description"
+      content="Unparalleled Competitive GambleFi and GameFi Ecosystem Powered by Polygon."
+    />
     <meta
       name="keywords"
       content="gambling,gaming,gamblefi,gamefi,cryptocurrency,crypto,game,games,blockchain,fi,ethereum,ethers,polygon,zkevm,testnet,mainnet,competitive,waitlist,multiplayer,casino,web3,token,crypto,tokenomics"
