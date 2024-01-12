@@ -2,14 +2,13 @@
   <Head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,700;1,400&display=swap"
-      rel="stylesheet"
+    <meta name="description" content="Unparalleled competitive gambling" />
+    <meta
+      name="keywords"
+      content="gambling,gaming,gamblefi,gamefi,cryptocurrency,crypto,game,games,blockchain,fi,ethereum,ethers,polygon,zkevm,testnet,mainnet,competitive,waitlist,multiplayer,casino,web3,token,crypto,tokenomics"
     />
+    <title>BottleHub - Gambling on The Edge</title>
   </Head>
-  <title>BottleHub - Gambling on The Edge</title>
   <div class="lg:flex lg:justify-center lg:items-center min-h-screen">
     <div class="lg:container">
       <Navigation />

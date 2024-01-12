@@ -1,6 +1,5 @@
 import { config } from "dotenv";
 import { ethers } from "ethers";
-import { readFileSync } from "node:fs";
 import abi from "../abi";
 
 export default defineEventHandler(async (event) => {
@@ -14,7 +13,7 @@ export default defineEventHandler(async (event) => {
 async function sendToken(toAddress: string) {
   config({ path: "/path/to/.env" });
 
-  const tokenContract = "0x153dE0bA5B0DdEb8817C4bc2f6Afd201ae391c48";
+  const tokenContract = "0x8318312dE65409CB61dF940a821C710e24843e62";
 
   const network = process.env.ETHEREUM_NETWORK;
   const provider = new ethers.InfuraProvider(network, process.env.INFURA_KEY);
@@ -42,7 +41,7 @@ async function sendToken(toAddress: string) {
     const receipt = await tx.wait();
 
     let hashData = {
-      url: `https://${network}.etherscan.io/tx/${tx.hash}`,
+      url: `https://mumbai.polygonscan.com/tx/${tx.hash}`,
       message: `Mined in block ${receipt!.blockNumber}`,
     };
 

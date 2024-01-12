@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev",
+    "dev": "NODE_TLS_REJECT_UNAUTHORIZED=0 nuxt dev --https --ssl-cert localhost.pem --ssl-key localhost-key.pem",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
@@ -13,10 +13,13 @@
     "@nuxt/devtools": "latest",
     "@nuxtjs/tailwindcss": "^6.10.1",
     "nuxt": "^3.8.2",
+    "nuxt-security": "^1.0.0",
+    "vite-plugin-godot": "^1.0.0",
     "vue": "^3.3.8",
     "vue-router": "^4.2.5"
   },
   "dependencies": {
+    "@iconoir/vue": "^7.3.0",
     "@vue/server-renderer": "^3.4.3",
     "@wagmi/core": "^1.4.12",
     "@web3modal/ethers5": "^3.5.3",
