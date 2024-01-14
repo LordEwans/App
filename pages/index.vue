@@ -1,3 +1,8 @@
+<script lang="js" setup>
+const showWaitlist =() => {
+  waitlist.showModal();
+}
+</script>
 <template>
   <Html lang="en">
     <Head>
@@ -33,10 +38,7 @@
                   </h2>
                 </div>
                 <div class="">
-                  <button
-                    class="btn mx-6 btn-primary"
-                    onclick="waitlist.showModal(); console.log('Modal')"
-                  >
+                  <button class="btn mx-6 btn-primary" @click="showWaitlist()">
                     join waitlist
                   </button>
                   <a
