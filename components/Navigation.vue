@@ -138,7 +138,7 @@ const unwatch = watchAccount(
         </li>
         <div>
           <button
-            class="btn btn-outline text-xs mx-6 btn-primary mt-9"
+            class="btn text-xs mx-6 btn-primary mt-9"
             v-if="!isConnected"
             @click="modal.open()"
           >

@@ -35,7 +35,7 @@
                 <div class="">
                   <button
                     class="btn mx-6 btn-primary"
-                    onclick="waitlist.showModal()"
+                    onclick="waitlist.showModal(); console.log('Modal')"
                   >
                     join waitlist
                   </button>
