@@ -47,6 +47,24 @@ const isConnected = ref(getAccount().isConnected);
 const unwatch = watchAccount(
   (account) => (isConnected.value = account.isConnected)
 );
+
+let elem = ref("");
+
+onMounted(() => {
+
+elem.value = document.getElementById("fullscreen");
+
+})
+function openFullscreen() {
+  console.log("fullscreen:" + elem.value)
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
+  }
+}
 </script>
 <template>
   <title>Games</title>
@@ -61,8 +79,21 @@ const unwatch = watchAccount(
       webkitallowfullscreen="true"
       mozallowfullscreen="true"
       msallowfullscreen="true"
-      width="100%"
-      height="100%"
+      width="1280"
+      height="720"
+      :id="iframeClass"
+      fullscreen_button="bottom"
     ></iframe>
+    <button class="btn" @click="openFullscreen()">Fullscreen</button>
   </div>
 </template>
+
+<style>
+.fullScreen {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+</style>
