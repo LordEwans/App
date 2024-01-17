@@ -53,7 +53,7 @@ export default defineNuxtConfig({
         {
           hid: "og-image",
           property: "og:image",
-          content: "/logo.svg",
+          content: "/og.jpg",
         },
         {
           hid: "og-url",
