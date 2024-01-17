@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "@iconoir/vue": "^7.3.0",
+    "@nuxt/content": "^2.10.0",
     "@vue/server-renderer": "^3.4.3",
     "@wagmi/core": "^1.4.12",
     "@web3modal/ethers5": "^3.5.3",

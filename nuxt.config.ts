@@ -7,6 +7,11 @@ export default defineNuxtConfig({
       enabled: true,
     },
   },
+  nitro: {
+    prerender: {
+      routes: ["/sitemap.xml"],
+    },
+  },
   security: {
     headers: {
       contentSecurityPolicy:
