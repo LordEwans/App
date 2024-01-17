@@ -37,6 +37,31 @@ export default defineNuxtConfig({
   app: {
     head: {
       link: [{ rel: "icon", type: "image/svg", href: "/logo.svg" }],
+      meta: [
+        { hid: "og-type", property: "og:type", content: "website" },
+        {
+          hid: "og-title",
+          property: "og:title",
+          content: "BottleHub - Gambling on The Edge",
+        },
+        {
+          hid: "og-desc",
+          property: "og:description",
+          content:
+            "Unparalleled Competitive GambleFi and GameFi Ecosystem Powered by Polygon.",
+        },
+        {
+          hid: "og-image",
+          property: "og:image",
+          content: "/logo.svg",
+        },
+        {
+          hid: "og-url",
+          property: "og:url",
+          content: "/",
+        },
+        { hid: "t-type", name: "twitter:card", content: "summary_large_image" },
+      ],
     },
   },
   runtimeConfig: {
