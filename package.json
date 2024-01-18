@@ -6,7 +6,7 @@
     "build": "nuxt build",
     "dev": "NODE_TLS_REJECT_UNAUTHORIZED=0 nuxt dev --https --ssl-cert localhost.pem --ssl-key localhost-key.pem",
     "generate": "nuxt generate",
-    "preview": "nuxt preview",
+    "preview": "nuxt preview --https --ssl-cert localhost.pem --ssl-key localhost-key.pem",
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "@iconoir/vue": "^7.3.0",
+    "@nuxt/content": "^2.10.0",
     "@vue/server-renderer": "^3.4.3",
     "@wagmi/core": "^1.4.12",
     "@web3modal/ethers5": "^3.5.3",
@@ -27,6 +28,7 @@
     "daisyui": "latest",
     "dotenv": "^16.3.1",
     "ethers": "^6.9.1",
+    "sitemap": "^7.1.1",
     "viem": "^1.21.3"
   }
 }

@@ -12,9 +12,10 @@ const projectId = config.public.projectId as string;
 
 const metadata = {
   name: "BottleHub DApp",
-  description: "My Website description",
-  url: "https:/bottlehub.vercel.app",
-  icons: ["https:/bottlehub.vercel.app/logo.svg"],
+  description:
+    "Unparalleled Competitive GambleFi and GameFi Ecosystem Powered by Polygon.",
+  url: "https://bottlehub.xyz",
+  icons: ["https://bottlehub.xyz/logo.ico"],
 };
 
 const chains = [polygonMumbai, polygon];
@@ -58,23 +59,30 @@ const unwatch = watchAccount(
           class="navbar py-[.2em] will-change-transform top-0 w-[96%] border md:border-0 md:border-t"
         >
           <div class="navbar-start ml-2 md:ml-6 block text-base">
-            <a
-              href="/"
+            <nuxt-link
+              to="/"
               class="btn bg-transparent hover:bg-transparent min-h-0 h-0 p-0 border-transparent hover:border-transparent"
             >
               <Logo />
-            </a>
+            </nuxt-link>
           </div>
           <nav class="lg:flex justify-self-center hidden navbar-center">
             <ul class="flex">
               <li class="partials">
-                <a href="#features" class="partials">Features</a>
+                <NavigationLink
+                  to="/features"
+                  class="partials"
+                  title="Features"
+                />
               </li>
               <li class="partials">
-                <a href="#ecosystem" class="partials">Ecosystem</a>
+                <NavigationLink to="/lobby" class="partials" title="Lobby" />
               </li>
               <li class="partials">
-                <a href="#trading" class="partials">Trading</a>
+                <NavigationLink to="/faucet" class="partials" title="Faucet" />
+              </li>
+              <li class="partials">
+                <NavigationLink to="/team" class="partials" title="Team" />
               </li>
             </ul>
             <!-- <button>
@@ -128,17 +136,20 @@ const unwatch = watchAccount(
         class="menu p-4 w-[70%] md:w-80 min-h-full bg-slate-950 text-base-content"
       >
         <li class="partials">
-          <a href="#features" class="partials">Features</a>
+          <NavigationLink to="/features" class="partials" title="Features" />
         </li>
         <li class="partials">
-          <a href="#ecosystem" class="partials">Ecosystem</a>
+          <NavigationLink to="/lobby" class="partials" title="Lobby" />
         </li>
         <li class="partials">
-          <a href="#trading" class="partials">Trading</a>
+          <NavigationLink to="/faucet" class="partials" title="Faucet" />
+        </li>
+        <li class="partials">
+          <NavigationLink to="/team" class="partials" title="Team" />
         </li>
         <div>
           <button
-            class="btn btn-outline text-xs mx-6 btn-primary mt-9"
+            class="btn text-xs mx-6 btn-primary mt-9"
             v-if="!isConnected"
             @click="modal.open()"
           >
