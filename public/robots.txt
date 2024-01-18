@@ -32,4 +32,5 @@ Allow: /
 User-agent: yahoo-blogs/v3.9
 Allow: / 
 User-agent: *
-Disallow: /
+Disallow: 
+Allow: /
