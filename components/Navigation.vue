@@ -5,7 +5,7 @@ import {
   defaultWagmiConfig,
   useWeb3Modal,
 } from "@web3modal/wagmi/vue";
-import { polygonMumbai, polygon } from "viem/chains";
+import { metis, polygonMumbai } from "viem/chains";
 
 const config = useRuntimeConfig();
 const projectId = config.public.projectId as string;
@@ -18,7 +18,7 @@ const metadata = {
   icons: ["https://bottlehub.xyz/logo.ico"],
 };
 
-const chains = [polygonMumbai, polygon];
+const chains = [polygonMumbai, metis];
 const wagmiConfig = defaultWagmiConfig({ chains, projectId, metadata });
 
 createWeb3Modal({
