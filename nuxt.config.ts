@@ -38,6 +38,7 @@ export default defineNuxtConfig({
     head: {
       link: [{ rel: "icon", type: "image/svg", href: "/logo.ico" }],
       meta: [
+        { name: "twitter:card", content: "summary_large_image" },
         {
           name: "twitter:title",
           content: "BottleHub - Gambling on The Edge",
@@ -47,8 +48,9 @@ export default defineNuxtConfig({
           content:
             "Unparalleled Competitive GambleFi and GameFi Ecosystem Powered by Polygon.",
         },
-        { name: "twitter:site", content: "/" },
-        { name: "twitter:image", content: "/og.jpg" },
+        { name: "twitter:site", content: "@bottlehubxyz" },
+        { name: "twitter:image", content: "https://bottlehub.xyz/og.jpg" },
+        { name: "twitter:image:src", content: "https://bottlehub.xyz/og.jpg" },
         {
           name: "keywords",
           content:
@@ -69,12 +71,12 @@ export default defineNuxtConfig({
         {
           hid: "og-image",
           property: "og:image",
-          content: "/og.jpg",
+          content: "https://bottlehub.xyz/og.jpg",
         },
         {
           hid: "og-url",
           property: "og:url",
-          content: "/",
+          content: "https://bottlehub.xyz",
         },
         { hid: "t-type", name: "twitter:card", content: "summary_large_image" },
       ],
