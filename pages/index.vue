@@ -1,7 +1,7 @@
 <script lang="js" setup>
 definePageMeta({
   pageTransition: {
-    name: "slide-right",
+    name: "slide-up",
     mode: "out-in",
   }
 });

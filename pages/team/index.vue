@@ -10,7 +10,7 @@
 wip.showModal();
 definePageMeta({
   pageTransition: {
-    name: "slide-right",
+    name: "slide-up",
     mode: "out-in",
   }
 });
