@@ -46,14 +46,14 @@ export default defineNuxtConfig({
         {
           name: "twitter:description",
           content:
-            "Unparalleled Competitive GambleFi and GameFi Ecosystem Powered by Polygon.",
+            "Unparalleled Competitive GambleFi and GameFi Ecosystem Powered by Metis.",
         },
         { name: "twitter:site", content: "@bottlehubxyz" },
         { name: "twitter:image", content: "https://bottlehub.xyz/og.jpg" },
         {
           name: "keywords",
           content:
-            "gambling,gaming,gamblefi,gamefi,cryptocurrency,crypto,game,games,blockchain,fi,ethereum,ethers,polygon,zkevm,testnet,mainnet,competitive,waitlist,multiplayer,casino,web3,token,crypto,tokenomics",
+            "gambling,gaming,gamblefi,gamefi,cryptocurrency,crypto,game,games,blockchain,fi,ethereum,ethers,metis,zkevm,testnet,mainnet,competitive,waitlist,multiplayer,casino,web3,token,crypto,tokenomics",
         },
         { hid: "og-type", property: "og:type", content: "website" },
         {
@@ -65,7 +65,7 @@ export default defineNuxtConfig({
           hid: "og-desc",
           property: "og:description",
           content:
-            "Unparalleled Competitive GambleFi and GameFi Ecosystem Powered by Polygon.",
+            "Unparalleled Competitive GambleFi and GameFi Ecosystem Powered by Metis.",
         },
         {
           hid: "og-image",

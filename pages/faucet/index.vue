@@ -1,6 +1,10 @@
 <template>
   <div class="w-full min-h-[67vh] flex items-center justify-center">
-    <Head> </Head>
+    <Head>
+      <meta
+        name="description"
+        content="Official site for getting BottleHub testnet tokens."
+    /></Head>
     <title>Faucet - Test Tokens for BottleHub</title>
     <div class="hero-content max-w-full w-full">
       <div class="text-center">
@@ -166,6 +170,6 @@ definePageMeta({
   pageTransition: {
     name: "slide-right",
     mode: "out-in",
-  }
+  },
 });
 </script>

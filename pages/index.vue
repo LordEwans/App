@@ -14,7 +14,7 @@ const showWaitlist =() => {
     <Head>
       <meta
         name="description"
-        content="Unparalleled Competitive GambleFi and GameFi Ecosystem Powered by Polygon."
+        content="Unparalleled Competitive GambleFi and GameFi Ecosystem Powered by Metis."
       />
     </Head>
     <title>BottleHub - Gambling on The Edge</title>
