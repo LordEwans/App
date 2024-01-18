@@ -90,7 +90,19 @@
 .input:focus {
   @apply outline-0;
 }
+@keyframes pulsate {
+  100% {
+    text-shadow: 0 0 4px #009ccc, 0 0 8px #009ccc;
+  }
+  0% {
+    text-shadow: 0 0 4px #009ccc, 0 0 16px #009ccc;
+  }
+}
 
 .active-link {
-  text-shadow: 0 0 4px #009ccc, 0 0 8px #009ccc;
+  animation: pulsate;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  @apply ease-in-out;
 }
