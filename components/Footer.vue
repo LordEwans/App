@@ -5,7 +5,7 @@
     >
       <nav>
         <div class="grid grid-flow-col gap-6 text-[var(--text)]">
-          <a href="https://x.com/BottleHub_DApp" target="_blank"
+          <a href="https://x.com/bottlehubxyz" target="_blank"
             ><svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
