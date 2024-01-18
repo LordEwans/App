@@ -168,7 +168,7 @@ const submitAddress = async () => {
 };
 definePageMeta({
   pageTransition: {
-    name: "slide-up",
+    name: "slide-right",
     mode: "out-in",
   },
 });
