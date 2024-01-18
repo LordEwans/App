@@ -89,7 +89,7 @@ const submitEmail = async () => {
     setTimeout(async () => {
       try {
         const { data: proxy } = await useFetch(
-          "https://mailclient.onrender.com/add",
+          "https://api.bottlehub.xyz/add",
           {
             method: "post",
             body: { address: email },
