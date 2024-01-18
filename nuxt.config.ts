@@ -50,7 +50,6 @@ export default defineNuxtConfig({
         },
         { name: "twitter:site", content: "@bottlehubxyz" },
         { name: "twitter:image", content: "https://bottlehub.xyz/og.jpg" },
-        { name: "twitter:image:src", content: "https://bottlehub.xyz/og.jpg" },
         {
           name: "keywords",
           content:
@@ -115,13 +114,14 @@ export default defineNuxtConfig({
         },
       },
     },
-  },
-  vite: {
-    server: {
-      headers: {
-        "Access-Control-Allow-Origin": "*",
-        "Cross-Origin-Embedder-Policy": "require-corp",
-        "Cross-Origin-Opener-Policy": "same-origin",
+    "/features/**": {
+      static: true,
+      ssr: false,
+      security: {
+        headers: {
+          crossOriginEmbedderPolicy: "require-corp",
+          crossOriginOpenerPolicy: "same-origin",
+        },
       },
     },
   },

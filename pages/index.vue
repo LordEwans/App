@@ -1,60 +1,53 @@
 <script lang="js" setup>
+definePageMeta({
+  pageTransition: {
+    name: "slide-right",
+    mode: "out-in",
+  }
+});
 const showWaitlist =() => {
   waitlist.showModal();
 }
 </script>
 <template>
-  <Html lang="en">
+  <div class="hero w-full min-h-[65vh] md:min-h-[67vh]">
     <Head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta
         name="description"
         content="Unparalleled Competitive GambleFi and GameFi Ecosystem Powered by Polygon."
       />
-      <meta
-        name="keywords"
-        content="gambling,gaming,gamblefi,gamefi,cryptocurrency,crypto,game,games,blockchain,fi,ethereum,ethers,polygon,zkevm,testnet,mainnet,competitive,waitlist,multiplayer,casino,web3,token,crypto,tokenomics"
-      />
-      <title>BottleHub - Gambling on The Edge</title>
     </Head>
-    <div class="lg:flex lg:justify-center lg:items-center min-h-screen">
-      <div class="lg:container">
-        <Navigation />
-        <div class="hero w-full min-h-[65vh] md:min-h-[67vh]">
-          <div class="hero-content max-w-full w-full">
-            <div class="text-center flex justify-center">
-              <div class="md:max-w-2xl lg:max-w-6xl align-top">
-                <div class="w-full mb-12 md:mb-16">
-                  <h1
-                    class="text-2xl mb-2 lg:mb-9 md:text-[clamp(2rem,4vw,4.2rem)] leading-[1.1] capitalize"
-                  >
-                    Unparalleled competitive gambling
-                  </h1>
-                  <h2
-                    class="capitalize text-3xl md:text-[clamp(2.7rem,4vw,4rem)] leading-[1.1] font-extrabold"
-                  >
-                    Experience the bleeding edge
-                  </h2>
-                </div>
-                <div class="">
-                  <button class="btn mx-6 btn-primary" @click="showWaitlist()">
-                    join waitlist
-                  </button>
-                  <a
-                    href="https://medium.com/"
-                    target="_blank"
-                    class="btn btn-ghost text-[oklch(var(--p))] hover:bg-transparent hover:underline"
-                    >Learn More</a
-                  >
-                </div>
-              </div>
-            </div>
+    <title>BottleHub - Gambling on The Edge</title>
+    <div class="hero-content max-w-full w-full">
+      <div class="text-center flex justify-center">
+        <div class="md:max-w-2xl lg:max-w-6xl align-top">
+          <div class="w-full mb-12 md:mb-16">
+            <h1
+              class="text-2xl mb-2 lg:mb-9 md:text-[clamp(2rem,4vw,4.2rem)] leading-[1.1] capitalize"
+            >
+              Unparalleled competitive gambling
+            </h1>
+            <h2
+              class="capitalize text-3xl md:text-[clamp(2.7rem,4vw,4rem)] leading-[1.1] font-extrabold"
+            >
+              Experience the bleeding edge
+            </h2>
+          </div>
+          <div class="">
+            <button class="btn mx-6 btn-primary" @click="showWaitlist()">
+              join waitlist
+            </button>
+            <a
+              href="https://medium.com/"
+              target="_blank"
+              class="btn btn-ghost text-[oklch(var(--p))] hover:bg-transparent hover:underline"
+              >Learn More</a
+            >
           </div>
         </div>
-        <Footer />
-      </div></div
-  ></Html>
+      </div>
+    </div>
+  </div>
 </template>
 
 <style>

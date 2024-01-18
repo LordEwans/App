@@ -47,6 +47,38 @@ const isConnected = ref(getAccount().isConnected);
 const unwatch = watchAccount(
   (account) => (isConnected.value = account.isConnected)
 );
+
+const route = ref(useRoute());
+const underline = {
+  faucet: ref("no-underline"),
+  features: ref("no-underline"),
+  lobby: ref("no-underline"),
+  team: ref("no-underline"),
+};
+const faucet = () => {
+  underline.faucet.value = "underline";
+  underline.features.value = "no-underline";
+  underline.lobby.value = "no-underline";
+  underline.team.value = "no-underline";
+};
+const features = () => {
+  underline.faucet.value = "no-underline";
+  underline.features.value = "underline";
+  underline.lobby.value = "no-underline";
+  underline.team.value = "no-underline";
+};
+const lobby = () => {
+  underline.faucet.value = "no-underline";
+  underline.features.value = "no-underline";
+  underline.lobby.value = "underline";
+  underline.team.value = "no-underline";
+};
+const team = () => {
+  underline.faucet.value = "no-underline";
+  underline.features.value = "no-underline";
+  underline.lobby.value = "no-underline";
+  underline.team.value = "underline";
+};
 </script>
 
 <template>
@@ -68,13 +100,40 @@ const unwatch = watchAccount(
           <nav class="lg:flex justify-self-center hidden navbar-center">
             <ul class="flex">
               <li class="partials">
-                <a href="#features" class="partials">Features</a>
+                <nuxt-link
+                  to="/features"
+                  class="partials"
+                  :class="underline.features.value"
+                  @click="features()"
+                  >Features</nuxt-link
+                >
               </li>
               <li class="partials">
-                <a href="#ecosystem" class="partials">Ecosystem</a>
+                <nuxt-link
+                  to="/lobby"
+                  class="partials"
+                  :class="underline.lobby.value"
+                  @click="lobby()"
+                  >Lobby</nuxt-link
+                >
               </li>
               <li class="partials">
-                <a href="#trading" class="partials">Trading</a>
+                <nuxt-link
+                  to="/faucet"
+                  class="partials"
+                  :class="underline.faucet.value"
+                  @click="faucet()"
+                  >Faucet</nuxt-link
+                >
+              </li>
+              <li class="partials">
+                <nuxt-link
+                  to="/team"
+                  class="partials"
+                  :class="underline.team.value"
+                  @click="team()"
+                  >Team</nuxt-link
+                >
               </li>
             </ul>
             <!-- <button>
@@ -128,13 +187,40 @@ const unwatch = watchAccount(
         class="menu p-4 w-[70%] md:w-80 min-h-full bg-slate-950 text-base-content"
       >
         <li class="partials">
-          <a href="#features" class="partials">Features</a>
+          <nuxt-link
+            to="/features"
+            class="partials"
+            :class="underline.features.value"
+            @click="features()"
+            >Features</nuxt-link
+          >
         </li>
         <li class="partials">
-          <a href="#ecosystem" class="partials">Ecosystem</a>
+          <nuxt-link
+            to="/lobby"
+            class="partials"
+            :class="underline.lobby.value"
+            @click="lobby()"
+            >Lobby</nuxt-link
+          >
         </li>
         <li class="partials">
-          <a href="#trading" class="partials">Trading</a>
+          <nuxt-link
+            to="/faucet"
+            class="partials"
+            :class="underline.faucet.value"
+            @click="faucet()"
+            >Faucet</nuxt-link
+          >
+        </li>
+        <li class="partials">
+          <nuxt-link
+            to="/team"
+            class="partials"
+            :class="underline.team.value"
+            @click="team()"
+            >Team</nuxt-link
+          >
         </li>
         <div>
           <button
