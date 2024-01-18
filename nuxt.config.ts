@@ -36,7 +36,7 @@ export default defineNuxtConfig({
   css: ["@/assets/css/main.pcss"],
   app: {
     head: {
-      link: [{ rel: "icon", type: "image/svg", href: "/logo-transparent.png" }],
+      link: [{ rel: "icon", type: "image/svg", href: "/logo.ico" }],
       meta: [
         { hid: "og-type", property: "og:type", content: "website" },
         {
