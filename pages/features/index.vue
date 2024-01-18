@@ -7,11 +7,10 @@
 </template>
 
 <script lang="js" setup>
+wip.showModal();
 definePageMeta({
   pageTransition: {
     name: "slide-right",
     mode: "out-in",
   }
 });
-wip.showModal();
-</script>
