@@ -12,9 +12,9 @@ const projectId = config.public.projectId as string;
 
 const metadata = {
   name: "BottleHub DApp",
-  description: "My Website description",
-  url: "https:/bottlehub.vercel.app",
-  icons: ["https:/bottlehub.vercel.app/logo.svg"],
+  description: "Unparalleled Competitive GambleFi and GameFi Ecosystem Powered by Polygon.",
+  url: "https://bottlehub.xyz",
+  icons: ["https://bottlehub.xyz/logo.ico"],
 };
 
 const chains = [polygonMumbai, polygon];
