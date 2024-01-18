@@ -38,6 +38,22 @@ export default defineNuxtConfig({
     head: {
       link: [{ rel: "icon", type: "image/svg", href: "/logo.ico" }],
       meta: [
+        {
+          name: "twitter:title",
+          content: "BottleHub - Gambling on The Edge",
+        },
+        {
+          name: "twitter:description",
+          content:
+            "Unparalleled Competitive GambleFi and GameFi Ecosystem Powered by Polygon.",
+        },
+        { name: "twitter:site", content: "/" },
+        { name: "twitter:image", content: "/og.jpg" },
+        {
+          name: "keywords",
+          content:
+            "gambling,gaming,gamblefi,gamefi,cryptocurrency,crypto,game,games,blockchain,fi,ethereum,ethers,polygon,zkevm,testnet,mainnet,competitive,waitlist,multiplayer,casino,web3,token,crypto,tokenomics",
+        },
         { hid: "og-type", property: "og:type", content: "website" },
         {
           hid: "og-title",

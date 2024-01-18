@@ -16,7 +16,6 @@ const showWaitlist =() => {
         name="keywords"
         content="gambling,gaming,gamblefi,gamefi,cryptocurrency,crypto,game,games,blockchain,fi,ethereum,ethers,polygon,zkevm,testnet,mainnet,competitive,waitlist,multiplayer,casino,web3,token,crypto,tokenomics"
       />
-      <link rel="icon" href="/favicon.ico" />
       <title>BottleHub - Gambling on The Edge</title>
     </Head>
     <div class="lg:flex lg:justify-center lg:items-center min-h-screen">
