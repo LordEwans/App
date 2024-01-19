@@ -3,3 +3,4 @@ https://bottlehub.xyz/faucet
 https://bottlehub.xyz/features
 https://bottlehub.xyz/lobby
 https://bottlehub.xyz/team
+https://bottlehub.xyz/documentation
