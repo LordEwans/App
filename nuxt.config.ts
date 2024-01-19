@@ -96,7 +96,6 @@ export default defineNuxtConfig({
   routeRules: {
     "/**": {
       ssr: true,
-      prerender: true,
       headers: {
         "Access-Control-Allow-Origin": "*",
         "Cross-Origin-Embedder-Policy": "require-corp",
