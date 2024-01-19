@@ -56,6 +56,7 @@ export default defineNuxtConfig({
         },
         { name: "twitter:site", content: "@bottlehubxyz" },
         { name: "twitter:image", content: "https://bottlehub.xyz/og.jpg" },
+        { name: "twitter:image:src", content: "https://bottlehub.xyz/og.jpg" },
         {
           name: "keywords",
           content:
