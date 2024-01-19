@@ -36,7 +36,7 @@ export default defineNuxtConfig({
   css: ["@/assets/css/main.pcss"],
   app: {
     head: {
-      link: [{ rel: "icon", type: "image/svg", href: "/logo.ico" }],
+      link: [{ rel: "icon", type: "image/x-icon", href: "https:/bottlehub.xyz/favicon.ico" }],
       meta: [
         { name: "twitter:card", content: "summary_large_image" },
         {
