@@ -36,7 +36,13 @@ export default defineNuxtConfig({
   css: ["@/assets/css/main.pcss"],
   app: {
     head: {
-      link: [{ rel: "icon", type: "image/x-icon", href: "https:/bottlehub.xyz/favicon.ico" }],
+      link: [
+        {
+          rel: "icon",
+          type: "image/x-icon",
+          href: "https:/bottlehub.xyz/favicon.ico",
+        },
+      ],
       meta: [
         { name: "twitter:card", content: "summary_large_image" },
         {
@@ -88,6 +94,8 @@ export default defineNuxtConfig({
   },
   routeRules: {
     "/**": {
+      ssr: true,
+      prerender: true,
       headers: {
         "Access-Control-Allow-Origin": "*",
         "Cross-Origin-Embedder-Policy": "require-corp",
@@ -97,32 +105,20 @@ export default defineNuxtConfig({
     "/game/**": {
       static: true,
       ssr: false,
-      security: {
-        headers: {
-          crossOriginEmbedderPolicy: "require-corp",
-          crossOriginOpenerPolicy: "same-origin",
-        },
-      },
     },
     "/lobby/**": {
       static: true,
       ssr: false,
-      security: {
-        headers: {
-          crossOriginEmbedderPolicy: "require-corp",
-          crossOriginOpenerPolicy: "same-origin",
-        },
-      },
     },
     "/features/**": {
+      ssr: true,
+    },
+    "/faucet/**": {
       static: true,
       ssr: false,
-      security: {
-        headers: {
-          crossOriginEmbedderPolicy: "require-corp",
-          crossOriginOpenerPolicy: "same-origin",
-        },
-      },
+    },
+    "/team/**": {
+      ssr: true,
     },
   },
 });

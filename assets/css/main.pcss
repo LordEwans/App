@@ -99,8 +99,25 @@
   }
 }
 
+@keyframes pulsate-hover {
+  100% {
+    text-shadow: 0 0 1px #009ccc, 0 0 2px #009ccc;
+  }
+  0% {
+    text-shadow: 0 0 2px #009ccc, 0 0 4px #009ccc;
+  }
+}
+
 .active-link {
   animation: pulsate;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  @apply ease-in-out;
+}
+
+.hovered-link:hover {
+  animation: pulsate-hover;
   animation-duration: 2.5s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
