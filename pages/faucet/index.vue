@@ -23,6 +23,7 @@
             type="submit"
             class="join-item btn btn-primary rounded-3xl w-full md:w-[20%]"
             @click.prevent="submitAddress"
+            @keyup.enter="submitAddress"
           >
             Get Token
           </button>
@@ -161,7 +162,6 @@ const submitAddress = async () => {
         formFeedback.value = "error";
         success.value = false;
         isLoading.value = false;
-        address.value = "";
       }
     }, 4000);
   }
