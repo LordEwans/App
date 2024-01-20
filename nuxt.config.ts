@@ -52,7 +52,7 @@ export default defineNuxtConfig({
         {
           name: "twitter:description",
           content:
-            "Unparalleled Competitive GambleFi and GameFi Ecosystem Powered by the Metis Blockchain Platform. ",
+            "Unparalleled Competitive GambleFi and GameFi Ecosystem Powered by the Metis Blockchain Platform.",
         },
         { name: "twitter:site", content: "@bottlehubxyz" },
         { name: "twitter:image", content: "https://bottlehub.xyz/og.jpg" },
@@ -60,7 +60,7 @@ export default defineNuxtConfig({
         {
           name: "keywords",
           content:
-            "gambling,gaming,gamblefi,gamefi,cryptocurrency,crypto,game,games,blockchain,fi,ethereum,ethers,metis,zkevm,testnet,mainnet,competitive,waitlist,multiplayer,casino,web3,token,crypto,tokenomics",
+            "gambling,gaming,gamblefi,gamefi,cryptocurrency,crypto,game,games,blockchain,fi,ethereum,ethers,polygon,zkevm,testnet,mainnet,competitive,waitlist,multiplayer,casino,web3,token,tokenomics,play-to-earn,blockchain-gaming,nft-gaming,decentralized-gaming,crypto-gaming,metis,layer,2,scaling,solution,defi,platform,esports,ranked-matchmaking,leaderboards,challenges,tournaments,ecosystem,metaverse,community,virtual-world,digital-assets",
         },
         { hid: "og-type", property: "og:type", content: "website" },
         {
