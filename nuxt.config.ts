@@ -52,7 +52,7 @@ export default defineNuxtConfig({
         {
           name: "twitter:description",
           content:
-            "Unparalleled Competitive GambleFi and GameFi Ecosystem Powered by the Metis Ecosystem. It's a new ecosystem combining GambleFi (decentralized gambling) and GameFi (blockchain-based gaming) powered by the Metis blockchain platform.",
+            "Unparalleled Competitive GambleFi and GameFi Ecosystem Powered by the Metis Blockchain Platform. ",
         },
         { name: "twitter:site", content: "@bottlehubxyz" },
         { name: "twitter:image", content: "https://bottlehub.xyz/og.jpg" },
@@ -72,7 +72,7 @@ export default defineNuxtConfig({
           hid: "og-desc",
           property: "og:description",
           content:
-            "Unparalleled Competitive GambleFi and GameFi Ecosystem Powered by the Metis Ecosystem. It's a new ecosystem combining GambleFi (decentralized gambling) and GameFi (blockchain-based gaming) powered by the Metis blockchain platform.",
+            "Unparalleled Competitive GambleFi and GameFi Ecosystem Powered by the Metis Blockchain Platform. ",
         },
         {
           hid: "og-image",
