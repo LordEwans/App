@@ -14,7 +14,7 @@ const showWaitlist =() => {
     <Head>
       <meta
         name="description"
-        content="Unparalleled Competitive GambleFi and GameFi Ecosystem Powered by Metis."
+        content="Unparalleled Competitive GambleFi and GameFi Ecosystem Powered by the Metis Ecosystem. It's a new ecosystem combining GambleFi (decentralized gambling) and GameFi (blockchain-based gaming) powered by the Metis blockchain platform. It emphasizes intense competition and aims to deliver an unparalleled experience in both areas."
       />
     </Head>
     <title>BottleHub - Gambling on The Edge</title>
