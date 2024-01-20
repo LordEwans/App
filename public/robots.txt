@@ -34,3 +34,7 @@ Allow: /
 User-agent: *
 Disallow: 
 Allow: /
+Allow: /*.jpg$
+Allow: /*.ico$
+
+Sitemap: https://bottlehub.xyz/sitemap.xml

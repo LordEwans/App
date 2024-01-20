@@ -16,6 +16,7 @@ const showWaitlist =() => {
         name="description"
         content="Unparalleled Competitive GambleFi and GameFi Ecosystem Powered by the Metis Blockchain Platform."
       />
+      <link rel="canonical" href="https://bottlehub.xyz" />
     </Head>
     <title>BottleHub - Gambling on The Edge</title>
     <div class="hero-content max-w-full w-full">
