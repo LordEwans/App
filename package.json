@@ -19,6 +19,9 @@
     "vue-router": "^4.2.5"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.5.1",
+    "@fortawesome/free-brands-svg-icons": "^6.5.1",
+    "@fortawesome/vue-fontawesome": "latest-3",
     "@iconoir/vue": "^7.3.0",
     "@nuxt/content": "^2.10.0",
     "@vue/server-renderer": "^3.4.3",

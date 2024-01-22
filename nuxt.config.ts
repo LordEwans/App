@@ -33,14 +33,17 @@ export default defineNuxtConfig({
     },
   },
   modules: ["@nuxtjs/tailwindcss", "@nuxt/devtools", "nuxt-security"],
-  css: ["@/assets/css/main.pcss"],
+  css: [
+    "@/assets/css/main.pcss",
+    "@fortawesome/fontawesome-svg-core/styles.css",
+  ],
   app: {
     head: {
       link: [
         {
           rel: "icon",
           type: "image/x-icon",
-          href: "https:/bottlehub.xyz/favicon.ico",
+          href: "/favicon.ico",
         },
       ],
       meta: [

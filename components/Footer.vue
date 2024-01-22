@@ -1,7 +1,7 @@
 <template>
   <div class="flex justify-center">
     <footer
-      class="footer footer-center p-10 w-[96%] mb-4 rounded-3xl border-b text-primary"
+      class="footer footer-center py-8 px-10 w-[96%] mb-4 rounded-3xl border-b text-primary"
     >
       <nav>
         <div class="grid grid-flow-col gap-6 text-[var(--text)]">
