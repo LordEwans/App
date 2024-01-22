@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col items-center mx-4 mb-8">
-    <img :src="'_nuxt/' + img" :alt="name" class="w-32 rounded-3xl mb-4" />
+    <img src="assets/icons/team/boki.png" :alt="name" class="w-32 rounded-3xl mb-4" />
     <p class="font-bold text-lg">{{ name }}</p>
     <p class="font-light text-sm">{{ role }}</p>
 
