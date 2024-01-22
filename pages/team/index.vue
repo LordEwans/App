@@ -7,27 +7,27 @@
         <h2 class="text-xl font-black mb-8">Core</h2>
         <div class="grid grid-cols-2 md:flex justify-center">
           <TeamMate
-            img="assets/icons/team/boki.png"
+            img="assets/img/team/boki.png"
             name="Chiemerie Onourah"
             role="Founder"
             x="https://x.com/ewanretorokugbe"
           />
           <TeamMate
-            img="assets/icons/team/ronnie.png"
+            img="assets/img/team/ronnie.png"
             name="Oghenefejiro Olokor"
             role="Head of defi research"
             x="https://twitter.com/ronnie_thedev"
             linkedin="https://www.linkedin.com/in/oghenefejiro-olokor-3a891a248/"
           />
           <TeamMate
-            img="assets/icons/team/8643.png"
+            img="assets/img/team/8643.png"
             name="Ewanretor Giwa-Okugbe"
             role="Head of technology"
             x="https://x.com/ewanretorokugbe"
             linkedin="https://www.linkedin.com/in/ewanretorokugbe/"
           />
           <TeamMate
-            img="assets/icons/team/ronnie.png"
+            img="assets/img/team/ronnie.png"
             name="Yang Chen"
             role="Lead Blockchain Engineer"
             x="https://x.com/ewanretorokugbe"
@@ -38,20 +38,20 @@
         <h2 class="text-xl font-black mb-8">Mates</h2>
         <div class="grid grid-cols-2 md:flex justify-center">
           <TeamMate
-            img="assets/icons/team/boki.png"
+            img="assets/img/team/boki.png"
             name="Adolphus Noble"
             role="Game Programmer"
             x="https://x.com/ewanretorokugbe"
           />
           <TeamMate
-            img="assets/icons/team/8643.png"
+            img="assets/img/team/8643.png"
             name="Adejesuyemi Damilare"
             role="3d Artist"
             x="https://x.com/ewanretorokugbe"
             linkedin="https://www.linkedin.com/in/ewanretorokugbe/"
           />
           <TeamMate
-            img="assets/icons/team/8643.png"
+            img="assets/img/team/8643.png"
             name="Firstname Surnname"
             role="Graphics Designer"
             x="https://x.com/ewanretorokugbe"
