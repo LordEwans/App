@@ -10,7 +10,7 @@
             img="/team/boki.png"
             name="Chiemerie Onourah"
             role="Founder"
-            x="https://x.com/ewanretorokugbe"
+            x="https://x.com/OnuorahJoh35464"
           />
           <TeamMate
             img="/team/ronnie.png"
@@ -27,35 +27,23 @@
             linkedin="https://www.linkedin.com/in/ewanretorokugbe/"
           />
           <TeamMate
-            img="/team/ronnie.png"
+            img="/team/yang.png"
             name="Yang Chen"
             role="Lead Blockchain Engineer"
-            x="https://x.com/ewanretorokugbe"
-            linkedin="https://www.linkedin.com/in/ewanretorokugbe/"
           />
         </div>
 
         <h2 class="text-xl font-black mb-8">Mates</h2>
         <div class="grid grid-cols-2 md:flex justify-center">
           <TeamMate
-            img="/team/boki.png"
+            img="/team/destus.png"
             name="Adolphus Noble"
             role="Game Programmer"
-            x="https://x.com/ewanretorokugbe"
           />
           <TeamMate
-            img="/team/8643.png"
+            img="/team/spagie.png"
             name="Adejesuyemi Damilare"
             role="3d Artist"
-            x="https://x.com/ewanretorokugbe"
-            linkedin="https://www.linkedin.com/in/ewanretorokugbe/"
-          />
-          <TeamMate
-            img="/team/8643.png"
-            name="Firstname Surnname"
-            role="Graphics Designer"
-            x="https://x.com/ewanretorokugbe"
-            linkedin="https://www.linkedin.com/in/ewanretorokugbe/"
           />
         </div>
       </div>
