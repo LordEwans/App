@@ -12,6 +12,7 @@
   "devDependencies": {
     "@nuxt/devtools": "latest",
     "@nuxtjs/tailwindcss": "^6.10.1",
+    "@vue/server-renderer": "^3.4.15",
     "nuxt": "^3.8.2",
     "nuxt-security": "^1.0.0",
     "vite-plugin-godot": "^1.0.0",
@@ -24,7 +25,7 @@
     "@fortawesome/vue-fontawesome": "latest-3",
     "@iconoir/vue": "^7.3.0",
     "@nuxt/content": "^2.10.0",
-    "@vue/server-renderer": "^3.4.3",
+    "@vitejs/plugin-vue": "",
     "@wagmi/core": "^1.4.12",
     "@web3modal/ethers5": "^3.5.3",
     "@web3modal/wagmi": "^3.5.3",
@@ -32,6 +33,7 @@
     "dotenv": "^16.3.1",
     "ethers": "^6.9.1",
     "sitemap": "^7.1.1",
-    "viem": "^1.21.3"
+    "viem": "^1.21.3",
+    "vite": ""
   }
 }
