@@ -5,7 +5,6 @@
     </NuxtLayout>
 
     <Contact />
-    <Loop> </Loop>
     <WIP />
   </div>
 </template>
