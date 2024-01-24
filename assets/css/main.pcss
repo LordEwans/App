@@ -50,6 +50,13 @@
   --b1-nav: hsla(213, 18%, 12%, 0.8);
 }
 
+::-moz-selection {
+  @apply text-slate-950 bg-[var(--text)];
+}
+
+::selection {
+  @apply text-slate-950 bg-[var(--text)];
+}
 .body {
   @apply bg-[length:140%_140%] bg-gradient-to-tr from-slate-950 via-slate-950 to-cyan-950 text-[var(--text)] overflow-x-auto overflow-y-hidden;
   font-family: "Gemsbuck";
