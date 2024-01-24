@@ -36,13 +36,13 @@ const showWaitlist =() => {
           </div>
           <div class="">
             <button class="btn mx-6 btn-primary" @click="showWaitlist()">
-              join waitlist
+              Join Waitlist
             </button>
-            <a
-              href="https://medium.com/"
-              target="_blank"
+            <nuxt-link
+              to="https://docs.bottlehub.xyz"
+              target="blank"
               class="btn btn-ghost text-[oklch(var(--p))] hover:bg-transparent hover:underline"
-              >Learn More</a
+              >Learn More</nuxt-link
             >
           </div>
         </div>

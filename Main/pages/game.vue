@@ -13,8 +13,8 @@ const projectId = config.public.projectId;
 const metadata = {
   name: "BottleHub DApp",
   description: "My Website description",
-  url: "https:/bottlehub.vercel.app",
-  icons: ["https:/bottlehub.vercel.app/logo.svg"],
+  url: "https:/bottlehub.xyz",
+  icons: ["https:/bottlehub.xyz/logo.svg"],
 };
 
 const chains = [polygonMumbai, polygon];
@@ -35,7 +35,7 @@ createWeb3Modal({
   tokens: {
     80001: {
       address: "0x8318312dE65409CB61dF940a821C710e24843e62",
-      image: "https:/bottlehub.vercel.app/logo.svg",
+      image: "https:/bottlehub.xyz/logo.svg",
     },
   },
 });
@@ -47,24 +47,6 @@ const isConnected = ref(getAccount().isConnected);
 const unwatch = watchAccount(
   (account) => (isConnected.value = account.isConnected)
 );
-
-let elem = ref("");
-
-onMounted(() => {
-
-elem.value = document.getElementById("fullscreen");
-
-})
-function openFullscreen() {
-  console.log("fullscreen:" + elem.value)
-  if (elem.requestFullscreen) {
-    elem.requestFullscreen();
-  } else if (elem.webkitRequestFullscreen) { /* Safari */
-    elem.webkitRequestFullscreen();
-  } else if (elem.msRequestFullscreen) { /* IE11 */
-    elem.msRequestFullscreen();
-  }
-}
 </script>
 <template>
   <title>Games</title>

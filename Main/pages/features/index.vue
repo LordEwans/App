@@ -9,9 +9,9 @@
         </h2>
         <p>
           In the mean time you can check out the
-          <nuxt-link href="/faucet" class="link">faucet</nuxt-link> to get test
+          <nuxt-link to="/faucet" class="link">faucet</nuxt-link> to get test
           tokens as well as the
-          <nuxt-link href="/documentation" class="link">docs</nuxt-link> to
+          <nuxt-link to="https://docs.bottlehub.xyz" class="link" target="blank">docs</nuxt-link> to
           learn more about the project.
         </p>
       </div>

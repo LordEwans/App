@@ -36,4 +36,5 @@ Allow: /
 Allow: /*.jpg$
 Allow: /*.ico$
 
+Sitemap: https://bottlehub.xyz/bottlehub-xyz.html
 Sitemap: https://bottlehub.xyz/bottlehub-xyz.xml

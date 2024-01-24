@@ -124,4 +124,12 @@ export default defineNuxtConfig({
       ssr: true,
     },
   },
+  vite: {
+    server: {
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+        "Cross-Origin-Embedder-Policy": "require-corp",
+      },
+    },
+  },
 });
