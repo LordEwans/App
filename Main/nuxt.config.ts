@@ -32,11 +32,19 @@ export default defineNuxtConfig({
             },
     },
   },
-  modules: ["@nuxtjs/tailwindcss", "@nuxt/devtools", "nuxt-security"],
+  modules: [
+    "@nuxtjs/tailwindcss",
+    "@nuxt/devtools",
+    "nuxt-security",
+    "nuxt-gtag",
+  ],
   css: [
     "@/assets/css/main.pcss",
     "@fortawesome/fontawesome-svg-core/styles.css",
   ],
+  gtag: {
+    id: process.env.GTAG_ID
+  },
   app: {
     head: {
       link: [

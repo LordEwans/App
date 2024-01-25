@@ -53,6 +53,11 @@ const isConnected = ref(getAccount().isConnected);
 const unwatch = watchAccount(
   (account) => (isConnected.value = account.isConnected)
 );
+
+const goFullscreen = () => {
+  console.log(document.querySelector('iframe.game'))
+  document.querySelector('iframe.game').requestFullscreen()
+}
 </script>
 
 <template>
@@ -70,9 +75,8 @@ const unwatch = watchAccount(
       msallowfullscreen="true"
       width="1280"
       height="720"
-      :id="iframeClass"
-      fullscreen_button="bottom"
-      @click=""
+      class="game"
     ></iframe>
   </div>
+  <button @click="goFullscreen()">Fullscreen</button>
 </template>
