@@ -5,78 +5,31 @@ definePageMeta({
     mode: "out-in",
   }
 });
-import { getAccount, watchAccount } from "@wagmi/core";
-import {
-  createWeb3Modal,
-  defaultWagmiConfig,
-  useWeb3Modal,
-} from "@web3modal/wagmi/vue";
-import { polygonMumbai, polygon } from "viem/chains";
-
-const config = useRuntimeConfig();
-const projectId = config.public.projectId;
-
-const metadata = {
-  name: "BottleHub DApp",
-  description: "My Website description",
-  url: "https:/bottlehub.xyz",
-  icons: ["https:/bottlehub.xyz/logo.svg"],
-};
-
-const chains = [polygonMumbai, polygon];
-const wagmiConfig = defaultWagmiConfig({ chains, projectId, metadata });
-
-createWeb3Modal({
-  wagmiConfig,
-  projectId,
-  chains,
-  themeMode: "dark",
-  themeVariables: {
-    "--w3m-font-family": "Gemsbuck",
-    "--w3m-border-radius-master": "2px",
-    "--w3m-accent": "#",
-    "--w3m-color-mix": "#020617",
-    "--w3m-color-mix-strength": 65,
-  },
-  tokens: {
-    80001: {
-      address: "0x8318312dE65409CB61dF940a821C710e24843e62",
-      image: "https:/bottlehub.xyz/logo.svg",
-    },
-  },
-});
-
-window.modal3 = useWeb3Modal();
-const router = useRouter();
-const isConnected = ref(getAccount().isConnected);
-
-const unwatch = watchAccount(
-  (account) => (isConnected.value = account.isConnected)
-);
-
-const goFullscreen = () => {
-  console.log(document.querySelector('iframe.game'))
-  document.querySelector('iframe.game').requestFullscreen()
-}
 </script>
 
 <template>
-  <title>Games</title>
-  <div class="h-fit w-full flex items-center justify-center">
-    <iframe
-      src="/game/demo/index.html"
-      frameborder="0"
-      allowfullscreen="true"
-      scrolling="no"
-      allow="autoplay; fullscreen *; geolocation; microphone; camera; midi; monetization; xr-spatial-tracking; gamepad; gyroscope; accelerometer; xr; cross-origin-isolated"
-      allowtransparency="true"
-      webkitallowfullscreen="true"
-      mozallowfullscreen="true"
-      msallowfullscreen="true"
-      width="1280"
-      height="720"
-      class="game"
-    ></iframe>
+  <div class="w-full min-h-[67vh] flex items-center justify-center">
+    <Head> </Head>
+    <title>BottleHub - Gambling on The Edge</title>
+    <div class="hero-content max-w-full w-full">
+      <div class="w-full justify-center text-center">
+        <h2 class="font-bold text-2xl capitalize mb-5">
+          Currently Work in Progress...
+        </h2>
+        <p>
+          In the mean time you can check out the
+          <nuxt-link to="/faucet" class="link">faucet</nuxt-link> to get test
+          tokens as well as the
+          <nuxt-link to="https://docs.bottlehub.xyz" class="link" target="blank"
+            >docs</nuxt-link
+          >
+          to learn more about the project. For more inquiries contact the team
+          via
+          <nuxt-link to="mailto:team@bottlehub.xyz" class="link"
+            >team@bottlehub.xyz</nuxt-link
+          >.
+        </p>
+      </div>
+    </div>
   </div>
-  <button @click="goFullscreen()">Fullscreen</button>
 </template>

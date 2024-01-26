@@ -1,7 +1,10 @@
+<script setup>
+</script>
+
 <template>
   <div class="flex justify-center">
     <footer
-      class="footer footer-center py-8 px-10 w-[96%] mb-4 rounded-3xl border-b text-primary"
+      class="footer footer-center py-8 px-10 w-[96%] rounded-3xl border-b text-primary"
     >
       <nav>
         <div class="grid grid-flow-col gap-6 text-[var(--text)] text-2xl">
@@ -22,8 +25,16 @@
       <aside
         class="flex max-lg:flex-col max-lg:items-center w-full text-xs md:text-sm justify-between"
       >
-        <p class="font-bold">BottleHub DApp <br /></p>
-        <p class="">Copyright © 2023 - All right reserved</p>
+        <p class="font-bold">
+          BottleHub ·
+          <nuxt-link
+            to="https://metis.io"
+            target="blank"
+            class="text-[oklch(var(--p))] hover:bg-transparent hover:underline"
+            >Powered by Metis</nuxt-link
+          ><br />
+        </p>
+        <p class="">Copyright © 2024 - All right reserved</p>
       </aside>
     </footer>
   </div>

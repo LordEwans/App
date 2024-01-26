@@ -51,8 +51,8 @@ const unwatch = watchAccount(
 </script>
 
 <template>
-  <div>
-    <div class="drawer drawer-end">
+  <div class="w-full flex justify-center">
+    <div class="drawer drawer-end fixed lg:container z-10">
       <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
       <div class="drawer-content">
         <div class="flex justify-center">

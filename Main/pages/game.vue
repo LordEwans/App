@@ -1,4 +1,10 @@
 <script lang="js" setup>
+definePageMeta({
+  pageTransition: {
+    name: "slide-right",
+    mode: "out-in",
+  }
+});
 import { getAccount, watchAccount } from "@wagmi/core";
 import {
   createWeb3Modal,
@@ -47,35 +53,34 @@ const isConnected = ref(getAccount().isConnected);
 const unwatch = watchAccount(
   (account) => (isConnected.value = account.isConnected)
 );
+
+const iframe = ref()
+
+const goFS = () => {
+  document.getElementById('iframe').requestFullscreen()
+}
 </script>
+
 <template>
-  <title>Games</title>
-  <div class="h-screen w-full flex items-center justify-center">
-    <iframe
-      src="/game/demo/index.html"
-      frameborder="0"
-      allowfullscreen="true"
-      scrolling="no"
-      allow="autoplay; fullscreen *; geolocation; microphone; camera; midi; monetization; xr-spatial-tracking; gamepad; gyroscope; accelerometer; xr; cross-origin-isolated"
-      allowtransparency="true"
-      webkitallowfullscreen="true"
-      mozallowfullscreen="true"
-      msallowfullscreen="true"
-      width="1280"
-      height="720"
-      :id="iframeClass"
-      fullscreen_button="bottom"
-    ></iframe>
-    <button class="btn" @click="openFullscreen()">Fullscreen</button>
+  <div>
+    <Head> </Head>
+    <title>BottleHub - Gambling on The Edge</title>
+    <div class="flex items-center justify-center">
+      <iframe
+        src="/game/demo/index.html"
+        frameborder="0"
+        allowfullscreen="true"
+        scrolling="no"
+        allow="autoplay; fullscreen *; geolocation; microphone; camera; midi; monetization; xr-spatial-tracking; gamepad; gyroscope; accelerometer; xr; cross-origin-isolated"
+        allowtransparency="true"
+        webkitallowfullscreen="true"
+        mozallowfullscreen="true"
+        msallowfullscreen="true"
+        width="1280"
+        height="720"
+        id="iframe"
+      ></iframe>
+      <button @click="goFS()" class="hidden">FS</button>
+    </div>
   </div>
 </template>
-
-<style>
-.fullScreen {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-</style>
