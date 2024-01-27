@@ -71,7 +71,7 @@ const goFS = () => {
         frameborder="0"
         allowfullscreen="true"
         scrolling="no"
-        allow="autoplay; fullscreen *; geolocation; microphone; camera; midi; monetization; xr-spatial-tracking; gamepad; gyroscope; accelerometer; xr; cross-origin-isolated"
+        allow="autoplay; fullscreen; geolocation; microphone; camera; midi; monetization; xr-spatial-tracking; gamepad; gyroscope; accelerometer; xr; cross-origin-isolated"
         allowtransparency="true"
         webkitallowfullscreen="true"
         mozallowfullscreen="true"
@@ -80,7 +80,6 @@ const goFS = () => {
         height="100%"
         id="iframe"
       ></iframe>
-      <button @click="goFS()" class="hidden">FS</button>
     </div>
   </div>
 </template>

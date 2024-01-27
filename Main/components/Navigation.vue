@@ -186,7 +186,6 @@ li.partials {
 header {
   @apply rounded-3xl mt-4 w-[96%] border-[var(--border-color)] bg-[var(--nav-bg)] md:bg-transparent md:shadow-none backdrop-blur-sm md:backdrop-blur-none;
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  -webkit-backdrop-filter: blur(4px);
 }
 @media (min-width: 768px) {
   header {
