@@ -62,10 +62,10 @@ const goFS = () => {
 </script>
 
 <template>
-  <div>
+  <div class="w-full min-h-[67vh] flex items-center justify-center">
     <Head> </Head>
     <title>BottleHub - Gambling on The Edge</title>
-    <div class="flex items-center justify-center">
+    <div class="flex items-center justify-center h-screen w-screen fixed top-0 left-0">
       <iframe
         src="/game/demo/index.html"
         frameborder="0"
@@ -76,8 +76,8 @@ const goFS = () => {
         webkitallowfullscreen="true"
         mozallowfullscreen="true"
         msallowfullscreen="true"
-        width="1280"
-        height="720"
+        width="100%"
+        height="100%"
         id="iframe"
       ></iframe>
       <button @click="goFS()" class="hidden">FS</button>

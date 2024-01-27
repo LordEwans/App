@@ -42,6 +42,6 @@
 
 <style>
 footer {
-  @apply rounded-3xl my-4 w-[96%] border-b border-[var(--border-color)] border-opacity-60;
+  @apply rounded-3xl my-4 w-[96%] border-b border-[var(--border-color)] border-opacity-60 z-[5];
 }
 </style>
