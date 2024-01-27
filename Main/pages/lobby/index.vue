@@ -12,7 +12,7 @@ definePageMeta({
     <Head> </Head>
     <title>BottleHub - Gambling on The Edge</title>
     <div class="hero-content max-w-full w-full">
-      <div class="w-full justify-center text-center">
+      <div class="justify-center text-center md:max-w-2xl lg:max-w-6xl">
         <h2 class="font-bold text-2xl capitalize mb-5">
           Currently Work in Progress...
         </h2>

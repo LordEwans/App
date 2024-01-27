@@ -57,7 +57,7 @@ const unwatch = watchAccount(
       <div class="drawer-content">
         <div class="flex justify-center">
           <header
-            class="navbar py-[.2em] will-change-transform top-0 w-[96%] border md:border-0 md:border-t"
+            class="navbar py-[0em] will-change-transform top-0 w-[96%] border md:border-0 md:border-t"
           >
             <div class="navbar-start ml-2 md:ml-6 block text-base">
               <nuxt-link
@@ -171,6 +171,9 @@ const unwatch = watchAccount(
 </template>
 
 <style>
+:root {
+  --nav-bg: rgba(2, 6, 23, 0.25);
+}
 li.partials {
   @apply inline mx-5 font-semibold;
 }
@@ -181,7 +184,14 @@ li.partials {
   @apply rounded-2xl;
 }
 header {
-  @apply rounded-3xl mt-4 w-[96%] border-[var(--border-color)] border-opacity-60;
+  @apply rounded-3xl mt-4 w-[96%] border-[var(--border-color)] bg-[var(--nav-bg)] md:bg-transparent md:shadow-none backdrop-blur-sm md:backdrop-blur-none;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  -webkit-backdrop-filter: blur(4px);
+}
+@media (min-width: 768px) {
+  header {
+    box-shadow: none;
+  }
 }
 .drawer-side {
   -ms-overflow-style: none;
