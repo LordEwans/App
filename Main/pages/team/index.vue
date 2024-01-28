@@ -22,7 +22,7 @@
           <TeamMate
             img="/team/8643.png"
             name="Ewanretor Giwa-Okugbe"
-            role="Head of technology"
+            role="Head of technology, Team Lead"
             x="https://x.com/ewanretorokugbe"
             linkedin="https://www.linkedin.com/in/ewanretorokugbe/"
           />

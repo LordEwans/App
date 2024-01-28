@@ -39,7 +39,7 @@ const showWaitlist =() => {
               Join Waitlist
             </button>
             <nuxt-link
-              to="https://docs.bottlehub.xyz"
+              to="https://docs.bottlehub.xyz/introduction/getting-started"
               target="blank"
               class="btn btn-ghost text-[oklch(var(--p))] hover:bg-transparent hover:underline"
               >Learn More</nuxt-link
