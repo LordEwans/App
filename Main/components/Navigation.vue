@@ -137,9 +137,7 @@ const unwatch = watchAccount(
           aria-label="close sidebar"
           class="drawer-overlay"
         />
-        <ul
-          class="menu p-4 w-[70%] md:w-80 min-h-full bg-slate-950 text-base-content"
-        >
+        <ul class="menu p-4 w-[70%] min-h-full bg-slate-950 text-base-content">
           <li class="partials">
             <NavigationLink to="/features" class="partials" title="Features" />
           </li>

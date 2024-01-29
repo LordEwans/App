@@ -62,7 +62,7 @@ const goFS = () => {
 </script>
 
 <template>
-  <div class="w-full min-h-[67vh] flex items-center justify-center">
+  <div class="w-full flex items-center justify-center">
     <Head> </Head>
     <title>BottleHub - Gambling on The Edge</title>
     <div class="flex items-center justify-center h-screen w-screen fixed top-0 left-0">

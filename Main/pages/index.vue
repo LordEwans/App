@@ -41,7 +41,7 @@ const showWaitlist =() => {
             <nuxt-link
               to="https://docs.bottlehub.xyz/introduction/getting-started"
               target="blank"
-              class="btn btn-ghost text-[oklch(var(--p))] hover:bg-transparent hover:underline"
+              class="btn btn-ghost text-[oklch(var(--p))] hover:bg-transparent hover:underline glowing-link"
               >Learn More</nuxt-link
             >
           </div>

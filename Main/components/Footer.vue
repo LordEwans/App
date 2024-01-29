@@ -30,7 +30,7 @@
           <nuxt-link
             to="https://metis.io"
             target="blank"
-            class="text-[oklch(var(--p))] hover:bg-transparent hover:underline"
+            class="text-[oklch(var(--p))] hover:bg-transparent hovered-link"
             >Powered by Metis</nuxt-link
           ><br />
         </p>
@@ -42,6 +42,6 @@
 
 <style>
 footer {
-  @apply rounded-3xl my-4 w-[96%] border-b border-[var(--border-color)] border-opacity-60 z-[5];
+  @apply rounded-3xl my-4 w-[96%] border-b border-[var(--border-color)] border-opacity-60;
 }
 </style>

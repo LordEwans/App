@@ -33,7 +33,7 @@
           :url="(url as string)"
           :isLoading="isLoading"
         />
-        <div class="mt-8 md:mt-16">
+        <div class="mt-8 md:mt-16 min-h-[50vh] md:min-h-[40vh]">
           <div class="md:max-w-2xl lg:max-w-6xl">
             <h2 class="capitalize text-2xl md:text-4xl font-extrabold">FAQs</h2>
             <div class="join join-vertical rounded-2xl">

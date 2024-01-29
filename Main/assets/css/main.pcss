@@ -61,6 +61,7 @@
 .body {
   @apply bg-[length:140%_140%] bg-gradient-to-tr from-slate-950 via-slate-950 to-cyan-950 text-[var(--text)] overflow-x-auto overflow-y-hidden;
   font-family: "Gemsbuck";
+  scroll-behavior: smooth;
 }
 
 .logo {
@@ -126,6 +127,14 @@
 
 .hovered-link:hover {
   animation: pulsate-hover;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  @apply ease-in-out;
+}
+
+.glowing-link {
+  animation: pulsate;
   animation-duration: 2.5s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
