@@ -1,7 +1,7 @@
 <template>
   <div class="w-full min-h-[67vh] flex items-center justify-center">
     <Head> </Head>
-    <title>Team - Here's To Those That Brought You BottleHub</title>
+    <title>Team · BottleHub</title>
     <div class="hero-content max-w-full w-full">
       <div class="w-full justify-center text-center">
         <h2 class="text-xl font-black mb-8">Core</h2>

@@ -18,7 +18,7 @@ const showWaitlist =() => {
       />
       <link rel="canonical" href="https://bottlehub.xyz" />
     </Head>
-    <title>BottleHub - Gambling on The Edge</title>
+    <title>BottleHub · Gambling on The Edge</title>
     <div class="hero-content max-w-full w-full">
       <div class="text-center flex justify-center">
         <div class="md:max-w-2xl lg:max-w-6xl align-top">
@@ -39,7 +39,7 @@ const showWaitlist =() => {
               Join Waitlist
             </button>
             <nuxt-link
-              to="https://docs.bottlehub.xyz/introduction/getting-started"
+              to="https://docs.bottlehub.xyz/"
               target="blank"
               class="btn btn-ghost text-[oklch(var(--p))] hover:bg-transparent hover:underline glowing-link"
               >Learn More</nuxt-link

@@ -5,7 +5,7 @@
         name="description"
         content="Official site for getting BottleHub testnet tokens."
     /></Head>
-    <title>Faucet - Test Tokens for BottleHub</title>
+    <title>Faucet · BottleHub</title>
     <div class="hero-content max-w-full w-full">
       <div class="text-center">
         <form
